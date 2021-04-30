@@ -1,0 +1,31 @@
+<script>
+    function Usuario(nombre, apellido, libros, mascotas) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.libros = libros;
+        this.mascotas = mascotas;
+    }
+
+    Usuario.prototype.getFullName = function() {
+        return `${this.nombre} ${this.apellido}`;
+    }
+
+    Usuario.prototype.addMascota = function(mascota) {
+        this.mascotas.push(mascota);
+    }
+
+    Usuario.prototype.getMascotas = function() {
+        return this.mascotas.length;
+    }
+
+    Usuario.prototype.addBook = function(nombre, autor) {
+        return this.libros.push({ nombre, autor });
+    }
+
+    Usuario.prototype.getBooks = function() {
+        return this.libros.map(function(libro) {
+            return libro.nombre;
+        });
+    }
+</script>
+<!-- <script src="tests.js"></script> -->
