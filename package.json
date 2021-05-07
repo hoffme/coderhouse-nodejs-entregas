@@ -1,0 +1,16 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "proyecto general de los entregables",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "entrega-2": "tsc && node build/entrega-2/operaciones",
+    "entrega-3": "node entrega-3"
+  },
+  "author": "Juan Ignacio Coronel",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.2.4"
+  }
+}
