@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/rxjs@7.0.1/dist/bundles/rxjs.umd.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input" />
+    <label id="text"></label>
+
+    <script>
+        const { Observable, fromEvent, operators } = rxjs;              // importacion rxjs
+
+        const inputSwitchOperator = observableParent => {               // creacion del operador switch
+            return new Observable(subscriber => {                       // se crea un observable interno
+
+                const next = text => {                                  // modificacion de la funcion next
+                    switch (text) {                                     // del observer padre
+                        case 'error': {
+                            subscriber.error();                         // en caso de que el valor sea un
+                            break                                       // llama al error del subscriber
+                        } 
+                        case 'complete': {                              // si el valor es complete llama al complete
+                            subscriber.complete();                      // del subscriber
+                            break
+                        }
+                        default: {                                      // sino llama al next del subscriptor
+                            subscriber.next(text);
+                        }
+                    }
+                }
+
+                const subscription = observableParent.subscribe({       // se subscribe a los eventos del observable
+                    ...subscriber,                                      // padre, con los mismos metodos y la
+                    next                                                // modificaicon del metodo next
+                });
+
+                return () => subscription.unsubscribe();                // cuando se desubscriba se desubscribe del 
+            })                                                          // observable padre
+        }
+
+        const init = (input, text) => {
+            const eventInput = fromEvent(input, 'keyup');               // observable de eventos del input
+            
+            const eventInputTextReverse = eventInput.pipe(              // nuevo observable con operadores pipe
+                operators.map(e => e.target.value),                     // se obtiene el valor del evento
+                inputSwitchOperator,                                    // se ejecuta switch con el texto
+                operators.map(t => t.split("").reverse().join("")),     // se invierte el texto
+            );
+
+            const subscription = eventInputTextReverse.subscribe({      // subscripcion al observable
+                next: t => text.textContent = t,
+                complete: () => console.log('cierre por complete'),
+                error: () => console.log('cierre por error')
+            })
+
+            const idTimeOut = setTimeout(() => {                        // al pasar 30 segundos se auto
+                subscription.unsubscribe();                             // desuscribe
+                
+                clearTimeout(idTimeOut);
+            }, 30 * 1000)
+        }
+    </script>
+
+    <script>
+        window.onload = (() => {
+            const input = document.getElementById('input');             // obteniendo elementos del dom
+            const text = document.getElementById('text');               // iniciando el script
+            
+            init(input, text);
+        })
+    </script>
+</body>
+</html>

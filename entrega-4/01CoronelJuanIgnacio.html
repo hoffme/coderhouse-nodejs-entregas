@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/rxjs@7.0.1/dist/bundles/rxjs.umd.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input" />
+    <label id="text"></label>
+
+    <script>
+        const { Observable, fromEvent } = rxjs;                             // importacion rxjs
+
+        const obsevableInput = input => {                                   // funcion constructora del observable
+            const eventInput = fromEvent(input, 'keyup');                   // observable de eventos del input
+
+            return new Observable(subscriber => {                           // observable recibe un subscriptor
+                const inputSubscriber = eventInput.subscribe(e => {         // se subscribe a los eventos del input
+                    const text = e.target.value;                            // obtencion del valor del input
+                    const textReverse = text.split("").reverse().join("");  // texto en reverso
+
+                    switch (text) {                                         // en caso de que el valor sea un error
+                        case 'error': {                                     // llama al error del subscriber
+                            subscriber.error();
+                            break
+                        } 
+                        case 'complete': {                                  // si el valor es complete llama al complete
+                            subscriber.complete();                          // del subscriber
+                            break
+                        }
+                        default: {                                          // sino llama al next del subscriptor con
+                            subscriber.next(textReverse);                   // el texto invertido como argumento
+                        }
+                    }
+                })
+
+                return () => {                                              // cuando se llama a desubscribir se desubscribe
+                    inputSubscriber.unsubscribe();                          // de los eventos del input y limpia los campos
+                    input.disabled = true;
+                    text.textContent = '';
+                }
+            })
+        }
+
+        const init = (input, text) => {
+            const eventInputTextReverse = obsevableInput(input);            // creacion del observable
+
+            const subscription = eventInputTextReverse.subscribe({          // subscripcion al observable
+                next: textReverse => text.textContent = textReverse,
+                complete: () => console.log('cierre por complete'),
+                error: () => console.log('cierre por error')
+            })
+
+            const idTimeOut = setTimeout(() => {                            // al pasar 30 segundos se auto
+                subscription.unsubscribe();                                 // desuscribe
+                
+                clearTimeout(idTimeOut);
+            }, 30 * 1000)
+        }
+    </script>
+
+    <script>
+        window.onload = (() => {
+            const input = document.getElementById('input');                 // obteniendo elementos del dom
+            const text = document.getElementById('text');
+            
+            init(input, text);                                              // iniciando el script
+        })
+    </script>
+</body>
+</html>
