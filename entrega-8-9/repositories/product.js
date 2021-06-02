@@ -36,4 +36,36 @@ export default class ProductRepository {
 
         return this.products.map(product => ({ ...product }));
     }
+
+    exist(id) {
+        try {
+            return !!this.getById(id);
+        } catch {
+            return false;
+        }
+    }
+
+    update(id, update) {
+        const product = this.getById(id);
+        const productUpdated = {
+            ...product,
+            ...update,
+            id
+        }
+
+        this.products = this.products.map(product => {
+            if (product.id !== id) return product;
+            return productUpdated;
+        })
+
+        return productUpdated;
+    }
+
+    delete(id) {
+        const product = this.getById(id);
+
+        this.products = this.products.filter(product => product.id !== id);
+
+        return product;
+    }
 }

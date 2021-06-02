@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODERHOUSE Entrega 9</title>
+</head>
+<body>
+    <h3>Create Product</h3>
+    <form id="create-form">
+        <div>
+            <label>Title:</label>
+            <input type="text" name="title" />
+        </div>
+        <div>
+            <label>Price:</label>
+            <input type="numbre" name="price" min="0" />
+        </div>
+        <div>
+            <label>Thumbnail:</label>
+            <input type="text" name="thumbnail" />
+        </div>
+        <input type="submit" value="Create Product" />
+    </form>
+    <div id="list-products">
+    </div>
+
+    <script>
+        const send = async (to, method = 'GET', obj) => {
+            const body = obj ? JSON.stringify(obj) : undefined;
+
+            const response = await fetch(to, {
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                method,
+                body
+            })
+
+            return await response.json();
+        }
+
+        const getFormJSON = (form) => {
+            const data = new FormData(form);
+            return Array.from(data.keys()).reduce((result, key) => {
+                result[key] = data.get(key);
+                return result;
+            }, {});
+        };
+    </script>
+    <script>
+        const createProduct = async product => {
+            const data = await send('/api/products/save', 'POST', product)
+            return data.result;
+        }
+
+        const getProducts = async () => {
+            const data = await send('/api/products/list');
+            return data.result;
+        }
+
+        const updateProduct = async (product) => {
+            const data = await send(`/api/products/update/${product.id}`, 'PUT', product);
+            return data.result;
+        }
+
+        const deleteProduct = async (product) => {
+            const data = await send(`/api/products/delete/${product.id}`, 'DELETE');
+            return data.result;
+        }
+    </script>
+    <script>
+        const loadListView = async () => {
+            const products = await getProducts();
+
+            list.innerHTML = '';
+
+            for (const product of products) {
+                list.append(viewProduct(product));
+            }
+        }
+
+        const viewProduct = product => {
+            const title = document.createElement('input');
+            title.placeholder = 'Titulo';
+            title.value = product.title;
+
+            const price = document.createElement('input');
+            price.type = 'number';
+            price.placeholder = 'Price';
+            price.value = product.price;
+
+            const thumbnail = document.createElement('input');
+            thumbnail.placeholder = 'Thumbnail';
+            thumbnail.value = product.thumbnail;
+
+            const buttonUpdate = document.createElement('button');
+            buttonUpdate.textContent = 'Update';
+            buttonUpdate.onclick = async () => {
+                await updateProduct({
+                    ...product,
+                    title: title.value,
+                    price: price.value,
+                    thumbnail: thumbnail.value,
+                });
+
+                loadListView();
+            }
+
+            const buttonDelete = document.createElement('button');
+            buttonDelete.textContent = 'Delete';
+            buttonDelete.onclick = async () => {
+                await deleteProduct(product);
+                loadListView();
+            }
+
+            const container = document.createElement('div');
+            container.append(
+                title, 
+                price, 
+                thumbnail, 
+                buttonUpdate, 
+                buttonDelete
+            );
+
+            return container;
+        }
+    </script>
+    <script>
+        const createForm = document.getElementById('create-form');
+        const list = document.getElementById('list-products');
+
+        createForm.onsubmit = e => {
+            e.preventDefault();
+
+            const product = getFormJSON(e.target);
+            createProduct(product).then(loadListView);
+        }
+
+        window.onload = loadListView;
+    </script>
+</body>
+</html>

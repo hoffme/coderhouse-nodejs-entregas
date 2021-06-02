@@ -1,11 +1,6 @@
 import express from 'express';
 
-import ErrorsMiddleware from './responses/error.js';
-
-import ProductRouter from './routers/product.js';
-
-// env vars
-
+import apiRouter from './routers/api.js';
 const PORT = 8080;
 
 // create app
@@ -15,13 +10,13 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// adding routes
+// settubg public folder
 
-app.use('/api/products', ProductRouter);
+app.use(express.static('public'));
 
-// middleware errors
+// setting api routes
 
-app.use(ErrorsMiddleware);
+app.use('/api', apiRouter);
 
 // create server 
 
