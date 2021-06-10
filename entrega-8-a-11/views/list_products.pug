@@ -1,0 +1,17 @@
+extends index.pug
+
+block append content
+    div(class='products-list-container')
+        h3 Productos 
+        if empty 
+            label(class="no-products") No hay Productos 
+        else 
+            ul(class="products")
+                each product in products 
+                    li(class="product")
+                        img(class="thumbnail", src=product.thumbnail)
+                        label(class="name")= product.name 
+                        label(class="price")= product.price
+                        button(onclick=`deleteProduct(${product.id})`) borrar
+
+    script(src="/js/list_products.js")

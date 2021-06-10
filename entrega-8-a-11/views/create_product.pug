@@ -1,0 +1,19 @@
+extends index.pug
+
+block append content
+    div(class="products-create-container")
+        h3 Ingreso de Producto 
+        form(id="form-product-save")
+            div(class="field field-name")
+                label Nombre 
+                input(type="text", name="name")
+            div(class="field field-price")
+                label Precio 
+                input(type="number", name="price")
+            div(class="field field-thumbnail")
+                label Thumbnail 
+                input(type="text", name="thumbnail")
+            input(class="button-submit", type="submit", value="guardar")
+        label(id="status")
+
+    script(src="/js/create_products.js")
