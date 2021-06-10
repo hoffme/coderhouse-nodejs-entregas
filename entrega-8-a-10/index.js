@@ -1,6 +1,6 @@
 import express from 'express';
 
-import handlebarsSetup from './engines/handlebars.js';
+import EngineSetup from './engines/handlebars.js';
 
 import apiRouter from './routers/api.js';
 import viewRouter from './routers/views.js';
@@ -20,7 +20,7 @@ app.use(express.static('public'));
 
 // setting engine
 
-handlebarsSetup(app);
+EngineSetup(app);
 
 // views routes
 
