@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head'); %>   
+    <body>
+        <%- include('partials/nav'); %>   
+
+        <div class="products-create-container">
+            <h3>Ingreso de Producto</h3>
+            <form id="form-product-save">
+                <div class="field field-name">
+                    <label>Nombre</label>
+                    <input type="text" name="name" />
+                </div>
+                <div class="field field-price">
+                    <label>Precio</label>
+                    <input type="number" name="price" />
+                </div>
+                <div class="field field-thumbnail">
+                    <label>Thumbnail</label>
+                    <input type="text" name="thumbnail" />
+                </div>
+                <input class="button-submit" type="submit" value="Guardar" />
+            </form>
+            <label id="status"></label>
+        </div>
+        
+        <script src="/js/create_product.js"></script>
+    </body>
+</html>

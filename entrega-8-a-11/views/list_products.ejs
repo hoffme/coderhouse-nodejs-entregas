@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head'); %>   
+    <body>
+        <%- include('partials/nav'); %>   
+
+        <div class="products-list-container">
+            <h3>Productos</h3>
+            <% if (empty) { %>
+                <label class="no-products">No hay Productos</label>
+            <% } else { %>
+                <ul class="products">
+                    <% products.forEach(product => { %>
+                        <li class="product">
+                            <img class="thumbnail" src="<%= product.name %>"/>
+                            <label class="name"><%= product.name %></label>
+                            <label class="price">$ <%= product.price %></label>
+                            <button onclick="deleteProduct(<%= product.id %>)">Borrar</button>
+                        </li>
+                    <% }); %>
+                </ul>
+            <% } %>
+        </div>
+        <script src="/js/list_products.js"></script>
+    </body>
+</html>
