@@ -1,6 +1,6 @@
 import express from 'express';
 
-import EngineSetup from './engines/handlebars.js';
+import EngineSetup from './engines/engine.js';
 
 import apiRouter from './routers/api.js';
 import viewRouter from './routers/views.js';
