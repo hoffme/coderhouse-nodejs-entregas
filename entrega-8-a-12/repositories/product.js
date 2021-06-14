@@ -1,6 +1,10 @@
 export default class ProductRepository {
     constructor() {
         this.products = [];
+
+        this.onCreate = undefined;
+        this.onUpdate = undefined;
+        this.onDelete = undefined;
     }
 
     _newId() {
@@ -11,6 +15,11 @@ export default class ProductRepository {
         const newProduct = { ...product, id: this._newId() };
 
         this.products.push(newProduct);
+
+        if (this.onCreate) {
+            try { this.onCreate(newProduct) }
+            catch (err) { console.error(err); }
+        }
 
         return newProduct;
     }
@@ -58,6 +67,11 @@ export default class ProductRepository {
             return productUpdated;
         })
 
+        if (this.onUpdate) {
+            try { this.onUpdate(product) }
+            catch (err) { console.error(err); }
+        }
+
         return productUpdated;
     }
 
@@ -65,6 +79,11 @@ export default class ProductRepository {
         const product = this.getById(id);
 
         this.products = this.products.filter(product => product.id !== id);
+
+        if (this.onDelete) {
+            try { this.onDelete(product) }
+            catch (err) { console.error(err); }
+        }
 
         return product;
     }

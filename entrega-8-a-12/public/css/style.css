@@ -9,22 +9,15 @@ body {
     width: 96%;
     max-width: 800px;
     margin: auto;
-}
-
-nav {
-    background-color: white;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    margin: 0.5rem 0;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    box-shadow: 1px 1px 3px #999;
 }
-nav a {
-    text-decoration: none;
-    color: darkcyan;
-    font-weight: bold;
+
+body > * {
+    width: 50%;
+    flex-basis: 50%;
+    flex: 1;
+    margin: 0 0.5rem;
 }
 
 .products-create-container {

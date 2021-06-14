@@ -4,7 +4,6 @@ import controller from '../controllers/product.js';
 
 const router = Router();
 
-router.get('/list', (...p) => controller.viewProducts(...p));
-router.get('/create', (...p) => controller.viewCreateProduct(...p));
+router.get('/', (...p) => controller.viewProducts(...p));
 
 export default router;

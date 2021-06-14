@@ -4,8 +4,21 @@ import ProductRepository from '../repositories/product.js';
 
 class Controller {
     constructor() {
+        this.listeiners = {};
+
         this.repository = new ProductRepository();
+        this.repository.onCreate = product => this.notify('create', product);
+        this.repository.onUpdate = product => this.notify('update', product);
+        this.repository.onDelete = product => this.notify('delete', product);
     }
+
+    notify(type, data) {
+        Object.values(this.listeiners).forEach(listeiner => listeiner(type, data));
+    }
+
+    addListeiner(id, cb) { this.listeiners[id] = cb }
+
+    removeListeiner(id) { delete this.listeiners[id] }
 
     getAll(req, res) {
         const products = this.repository.getAll();
@@ -47,19 +60,7 @@ class Controller {
     }
 
     viewProducts(req, res) {
-        let products = undefined;
-        let empty = true;
-        
-        try { 
-            products = this.repository.getAll() 
-            empty = false;
-        } catch {}
-
-        res.render('list_products', { products, empty })
-    }
-
-    viewCreateProduct(req, res) {
-        res.render('create_product', {})
+        res.render('editor');
     }
 }
 
