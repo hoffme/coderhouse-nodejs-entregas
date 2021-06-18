@@ -1,6 +1,6 @@
 import { Router } from 'express';
 
-import ErrorsMiddleware from '../responses/error.js';
+import ErrorsMiddleware from './responses/error.js';
 import ProductRouter from './product_api.js';
 
 const router = Router();
