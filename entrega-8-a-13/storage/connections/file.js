@@ -12,7 +12,17 @@ class FileStorage {
 
     async set(obj) {
         const text = JSON.stringify(obj);
-        return await fs.promises.writeFile(this.path, text);
+        
+        try {
+            return await fs.promises.writeFile(this.path, text);
+        } catch (e) {
+            if (e.code !== 'ENOENT') throw e;
+
+            const route = this.path.split('/');
+            await fs.promises.mkdir(route.slice(0, route.length - 1).join('/'));
+        }
+
+        return await fs.promises.writeFile(this.path, text);        
     }
 }
 

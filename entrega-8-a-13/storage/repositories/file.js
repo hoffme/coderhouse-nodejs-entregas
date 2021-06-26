@@ -12,16 +12,13 @@ class FileRepository {
     }
 
     async setup() {
-        let data = undefined;
         try {
-            data = await this.file.get();
+            const data = await this.file.get();
+            this.last_id = data.last_id;
+            return;
         } catch (e) {}
 
-        if (data) {
-            this.last_id = data.last_id;
-        } else {
-            await this.file.set({ last_id: 0, items: {} })
-        }
+        await this.file.set({ last_id: 0, items: {} });
     }
 
     _newId() {
