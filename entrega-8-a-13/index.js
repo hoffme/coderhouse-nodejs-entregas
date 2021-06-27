@@ -12,7 +12,7 @@ import realTime from './routers/realtime.js';
 
 (async () => {
     // constants
-    const PORT = 8080;
+    const PORT = process.env.PORT || 8080;
 
     // Setups controllers
     await Controllers.setup();
