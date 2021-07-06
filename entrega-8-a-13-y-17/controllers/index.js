@@ -1,7 +1,6 @@
 import ProductsController from "./product.js";
 import ChatController from "./chat.js";
 
-import MemoryRepository from "../storage/repositories/memory.js";
 import KnexRepository from "../storage/repositories/knex.js";
 
 import mysqlConnection from "../storage/connections/mysql.js";
@@ -11,7 +10,17 @@ class Controllers {
     static chat = undefined;
 
     static async setup() {
-        const productsRepository = new MemoryRepository();
+        const productsRepository = new KnexRepository(mysqlConnection, {
+            name: 'productos',
+            builder: async (table) => {
+                table.increments('id', { primaryKey: true })
+                table.string('name')
+                table.string('thumbnail')
+                table.float('price')
+            }
+        });
+        await productsRepository.setup();
+
         Controllers.products = new ProductsController(productsRepository);
 
         const chatRepository = new KnexRepository(mysqlConnection, {
