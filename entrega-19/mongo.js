@@ -37,7 +37,7 @@ db.productos.insert([
         nombre: "Leche",
         categoria: 3,
         stock: 0,
-        precio: 5600
+        precio: 4300
     }
 ])
 
@@ -90,7 +90,7 @@ db.productos.find({}, {nombre:1}).sort({precio:1}).limit(1).skip(2)
 
 db.productos.updateMany({}, {$set:{stock:100}})
 
-db.productos.updateMany({precio:{$gt:4000}}, {$set:{stock:100}})
+db.productos.updateMany({precio:{$gt:4000}}, {$set:{stock:0}})
 
 db.productos.deleteMany({precio:{$lt:1000}})
 
