@@ -1,0 +1,52 @@
+<style>
+    .product-test-container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    } 
+
+    .products-list-container {
+        flex: 1;
+        overflow-y: auto;
+    }
+
+    .products-list-container #products {
+        height: 100%;
+        overflow-y: auto;
+    }
+</style>
+
+<div class="product-test-container">
+    <input id="product-count" placeholder="cantidad" min="0" step="1" type="number">
+
+    <div class="products-list-container">
+        <h3>Productos</h3>
+        <div id="products" class="products">
+        </div>
+    </div>
+</div>
+
+<script>
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    const params = Object.fromEntries(urlSearchParams.entries());
+
+    const initialCount = params.count || 10;
+
+    window.onload = () => {
+        const inputCount = document.getElementById('product-count');
+        const productsView = document.getElementById('products');
+
+        inputCount.onchange = () => {
+            send(`/api/products/list/test/${inputCount.value}`)
+                .then(products => {
+                    refreshProducts(productsView, products.result);
+                });
+        }
+
+        inputCount.value = initialCount;
+        send(`/api/products/list/test/${initialCount}`)
+                .then(products => {
+                    refreshProducts(productsView, products.result);
+                });
+    }
+</script>

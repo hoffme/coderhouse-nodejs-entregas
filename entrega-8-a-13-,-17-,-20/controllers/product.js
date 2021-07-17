@@ -1,3 +1,5 @@
+import Faker from 'faker';
+
 import successResponse from '../routers/responses/success.js';
 
 class ProductsController {
@@ -20,6 +22,29 @@ class ProductsController {
     removeListeiner(id) { this.listeiners = this.listeiners.filter(lis => lis.id !== id) }
 
     // REST API
+
+    async getAllTestREST(req, res) {
+        const count = req.params.count || 10;
+
+        const uuid = (a) => (
+            a
+              /* eslint-disable no-bitwise */
+              ? ((Number(a) ^ Math.random() * 16) >> Number(a) / 4).toString(16)
+              : (`${1e7}-${1e3}-${4e3}-${8e3}-${1e11}`).replace(/[018]/g, uuid)
+        );        
+
+        const products = [];
+        for (let i = 0; i < count; i++) {
+            products.push({
+                id: uuid(),
+                name: Faker.commerce.productName(),
+                thumbnail: Faker.image.business(),
+                price: Faker.commerce.price()
+            })            
+        }
+
+        successResponse(res, products);
+    }
 
     async getAllREST(req, res) {
         const products = await this.getAll();
@@ -67,6 +92,10 @@ class ProductsController {
 
     viewProducts(req, res) {
         res.render('editor');
+    }
+
+    viewProductsTest(req, res) {
+        res.render('test-products');
     }
 }
 
