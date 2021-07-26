@@ -1,3 +1,11 @@
+const schemaAuthor = new normalizr.schema.Entity('author', {}, { idAttribute: 'email' });
+
+const schemaMessage = new normalizr.schema.Entity('message', {
+    author: schemaAuthor
+})
+
+const schemaMessages = new normalizr.schema.Array(schemaMessage);
+
 const getFormJSON = (form) => {
     const data = new FormData(form);
     return Array.from(data.keys()).reduce((result, key) => {
@@ -66,10 +74,12 @@ const refreshProducts = (productsView, products) => {
     })
 }
 
-const refreshChat = (chatView, messages) => {
-    chatView.innerHTML = '';
+const refreshChat = (chatView, messagesNormalized) => {
+    const messages = normalizr.denormalize(messagesNormalized.result, schemaMessages, messagesNormalized.entities);
 
-    if (messages.length === 0) {
+    chatView.innerHTML = '';
+    
+    if (!messages || messages.length === 0) {
         const label = document.createElement('label');
         label.classList.add('no-messages');
         label.textContent = 'No hay Mensajes';
@@ -81,7 +91,7 @@ const refreshChat = (chatView, messages) => {
     messages.forEach(message => {
         const email = document.createElement('label');
         email.classList.add('email');
-        email.textContent = message.email;
+        email.textContent = message.author.nick;
 
         const date = document.createElement('label');
         date.classList.add('date');
@@ -145,9 +155,18 @@ window.onload = () => {
     formCreateMessage.onsubmit = e => {
         e.preventDefault();
 
-        const message = getFormJSON(e.target);
+        const data = getFormJSON(e.target);
 
-        socket.emit('message', message, () => {
+        let author = {...data};
+        delete author['text']
+        
+        const message = {
+            text: data.text,
+            author
+        }
+
+        socket.emit('message', message, (data) => {
+            console.log(data);
             const inputText = formCreateMessage.elements.find(input => input.type === 'text');
             if (inputText) inputText.value = "";
         });

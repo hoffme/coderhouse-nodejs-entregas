@@ -13,7 +13,7 @@ const realtime = (io) => {
         socket.emit('initial_data', intialData);
 
         socket.on('message', message => {
-            Controllers.chat.addMessage(message.email, message.text);
+            Controllers.chat.addMessage(message);
         })
     })
 
