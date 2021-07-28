@@ -1,7 +1,9 @@
 import express from 'express';
-import seccion from 'express-session';
 import { Server } from 'http';
 import { Server as SocketIO } from 'socket.io';
+
+import seccion from 'express-session';
+import MongoStore from 'connect-mongo';
 
 import Controllers from './controllers/index.js';
 
@@ -26,6 +28,9 @@ import realTime from './routers/realtime.js';
     app.use(express.json());
     app.use(express.urlencoded({ extended: true }));
     app.use(seccion({
+        store: MongoStore.create({
+            mongoUrl: 'mongodb+srv://coderhouse:coderhouse@cluster0.mwsl6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+        }),
         secret: "clave super secreta",
         resave: true,
         saveUninitialized: true

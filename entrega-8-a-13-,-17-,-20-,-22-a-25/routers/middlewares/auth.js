@@ -3,20 +3,20 @@ const auth = (authorized = true) => {
 
     const logged = (session) => {
         if (!session.name || !session.time) return false;
-        if (ms() - ms(session.time) > 1000 * 60) return false;
-
-        console.log(ms(), ms(session.time), ms() - ms(session.time) > 1000);
+        if (ms() - ms(session.time) > 1000 * 60 * 10) {
+            session.destroy();
+            return false;
+        }
 
         return true;
     }
 
     if (authorized) {
         return (req, res, next) => {
-            if (logged(req.session)) return next();
+            if (!logged(req.session)) return res.redirect('/login');
 
             req.session.time = new Date();
-        
-            res.redirect('/login');
+            return next();
         }
     }
 
