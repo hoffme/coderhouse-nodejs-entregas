@@ -87,16 +87,6 @@ class ProductsController {
     async update(id, update) { return await this.repository.update(id, update) }
 
     async delete(id) { return await this.repository.delete(id) }
-
-    // WEB view
-
-    viewProducts(req, res) {
-        res.render('editor');
-    }
-
-    viewProductsTest(req, res) {
-        res.render('test-products');
-    }
 }
 
 export default ProductsController;

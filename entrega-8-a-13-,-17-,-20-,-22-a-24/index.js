@@ -1,4 +1,5 @@
 import express from 'express';
+import seccion from 'express-session';
 import { Server } from 'http';
 import { Server as SocketIO } from 'socket.io';
 
@@ -24,6 +25,11 @@ import realTime from './routers/realtime.js';
 
     app.use(express.json());
     app.use(express.urlencoded({ extended: true }));
+    app.use(seccion({
+        secret: "clave super secreta",
+        resave: true,
+        saveUninitialized: true
+    }))
 
     // public folder
     app.use(express.static('public'));
