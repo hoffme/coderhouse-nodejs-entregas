@@ -1,6 +1,7 @@
 import express from 'express';
 import { Server } from 'http';
 import { Server as SocketIO } from 'socket.io';
+import passport from 'passport';
 
 import seccion from 'express-session';
 import MongoStore from 'connect-mongo';
@@ -32,9 +33,11 @@ import realTime from './routers/realtime.js';
             mongoUrl: 'mongodb+srv://coderhouse:coderhouse@cluster0.mwsl6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
         }),
         secret: "clave super secreta",
-        resave: true,
-        saveUninitialized: true
+        resave: false,
+        saveUninitialized: false
     }))
+    app.use(passport.initialize());
+    app.use(passport.session());
 
     // public folder
     app.use(express.static('public'));

@@ -1,0 +1,28 @@
+<style>
+
+</style>
+
+<div>
+    <h1>Registrar</h1>
+    <form action="/api/auth/register" method="POST">
+        <input
+            required
+            placeholder="Usuario"
+            name="username"
+        />
+        <input
+            required
+            placeholder="Contraseña"
+            name="password"
+        />
+        <input
+            type="submit"
+            value="Registrar"
+        />
+    </form>
+    {{#if error}}
+        {{error}}
+    {{/if}}
+
+    <a href="/login">Ingresar</a>
+</div>
