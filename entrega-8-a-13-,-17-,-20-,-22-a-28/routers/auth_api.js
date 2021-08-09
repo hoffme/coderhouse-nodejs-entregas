@@ -5,13 +5,15 @@ import passportFacebok from 'passport-facebook';
 
 import Controllers from '../controllers/index.js';
 
+import { FACEBOOK_CLIENT_ID, FACEBOOK_CLIENT_SECRECT, PORT } from '../settings.js';
+
 const FacebookStrategy = passportFacebok.Strategy;
 
 passport.use(new FacebookStrategy(
     {
-        clientID: '570983080569000',
-        clientSecret: '50e6fcbbf0795d89f2b7019ec7b5fe71',
-        callbackURL: 'http://localhost:8080/api/auth/facebook/callback',
+        clientID: FACEBOOK_CLIENT_ID,
+        clientSecret: FACEBOOK_CLIENT_SECRECT,
+        callbackURL: `http://localhost:${PORT}/api/auth/facebook/callback`,
         profileFields: ['id', 'displayName', 'emails', 'picture.type(large)']
     },
     async (accessToken, refreshToken, profile, done) => {

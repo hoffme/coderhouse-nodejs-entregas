@@ -14,10 +14,9 @@ import apiRouter from './routers/api.js';
 import viewRouter from './routers/views.js';
 import realTime from './routers/realtime.js';
 
-(async () => {
-    // constants
-    const PORT = process.env.PORT || 8080;
+import { PORT } from './settings.js';
 
+(async () => {
     // Setups controllers
     await Controllers.setup();
 
@@ -53,6 +52,10 @@ import realTime from './routers/realtime.js';
 
     // socket connections
     realTime(io);
+
+    process.on('exit', code => {
+        console.log(`programa cerrado con codigo: ${code}`)
+    })
 
     // initialize server 
     http.listen(PORT, () => {

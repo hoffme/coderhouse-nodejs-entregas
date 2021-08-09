@@ -25,6 +25,18 @@ router.get('/', auth(), (req, res) => {
     }});
 });
 
+router.get('/info', auth(false), (req, res) => {
+    res.render('info', {info: {
+        argv: process.argv,
+        platform: process.platform,
+        nodeVersion: process.version,
+        memoryUsage: process.memoryUsage(),
+        pathExect: process.title,
+        processID: process.pid,
+        folder: process.cwd()
+    }});
+})
+
 router.get('/test', auth(), (req, res) => {
     res.render('test-products');
 });
