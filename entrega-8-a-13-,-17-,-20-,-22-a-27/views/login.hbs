@@ -1,0 +1,19 @@
+<style>
+    .facebook-button {
+        background-color: #1771ed;
+        color: white;
+        font-weight: bold;
+        padding: 1rem;
+        border: none;
+        border-radius: 0.5rem;
+        text-decoration: none;
+    }
+</style>
+
+<div>
+    <h1>Ingresar</h1>
+    <a href="/api/auth/facebook" class="facebook-button">Facebook</a>
+    {{#if error}}
+        {{error}}
+    {{/if}}
+</div>

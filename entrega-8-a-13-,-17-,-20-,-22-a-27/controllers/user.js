@@ -20,9 +20,9 @@ class UserController {
 
     // Methods
 
-    async find(username) {
+    async find(id) {
         const users = await this.repository.getAll();
-        return users.find(user => user.username === username);
+        return users.find(user => user.id === id);
     }
 
     async register(user) {

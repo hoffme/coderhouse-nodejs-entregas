@@ -11,19 +11,18 @@ router.get('/login', auth(false), (req, res) => {
     res.render('login', { error });
 })
 
-router.get('/register', auth(false), (req, res) => {
-    const error = req.query.error;
-    res.render('register', { error });
-})
-
 router.get('/logout', auth(false), (req, res) => {
     res.render('logout');
 })
 
 router.get('/', auth(), (req, res) => {
-    const user = { name: req.session.name }
+    const facebookUser = req.session.passport.user;
 
-    res.render('editor', { user });
+    res.render('editor', {user: {
+        name: facebookUser.displayName,
+        email: facebookUser.emails[0]?.value,
+        photo: facebookUser.photos[0]?.value
+    }});
 });
 
 router.get('/test', auth(), (req, res) => {
