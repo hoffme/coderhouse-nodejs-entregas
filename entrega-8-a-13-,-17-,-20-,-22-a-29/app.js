@@ -16,7 +16,7 @@ import realTime from './routers/realtime.js';
 
 import { PORT } from './settings.js';
 
-(async () => {
+const app = async () => {
     // Setups controllers
     await Controllers.setup();
 
@@ -61,4 +61,6 @@ import { PORT } from './settings.js';
     http.listen(PORT, () => {
         console.log(`Listening on http://localhost:${PORT}`);
     })
-})()
+};
+
+export default app;

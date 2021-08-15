@@ -5,13 +5,19 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node --trace-warnings index.js",
+    "cluster": "node cluster.js",
+    "prod": "forever start index.js",
+    "prod-cluster": "forever start cluster.js",
+    "prod-pm2": "pm2 start --name='server-fork' --watch index.js",
+    "prod-cluster-pm2": "pm2 start --name='server-cluster' --watch -i max index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "connect-mongo": "^4.4.1",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-handlebars": "^5.3.2",
     "express-session": "^1.17.2",

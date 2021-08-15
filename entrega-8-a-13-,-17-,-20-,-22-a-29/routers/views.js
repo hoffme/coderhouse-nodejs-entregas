@@ -1,3 +1,5 @@
+import os from 'os';
+
 import { Router } from 'express';
 
 import auth from './middlewares/auth.js';
@@ -33,7 +35,8 @@ router.get('/info', auth(false), (req, res) => {
         memoryUsage: process.memoryUsage(),
         pathExect: process.title,
         processID: process.pid,
-        folder: process.cwd()
+        folder: process.cwd(),
+        cpus: os.cpus().length
     }});
 })
 
