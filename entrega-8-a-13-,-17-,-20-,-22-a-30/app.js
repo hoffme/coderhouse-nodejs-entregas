@@ -1,4 +1,5 @@
 import express from 'express';
+import compression from 'compression';
 import { Server } from 'http';
 import { Server as SocketIO } from 'socket.io';
 import passport from 'passport';
@@ -14,16 +15,27 @@ import apiRouter from './routers/api.js';
 import viewRouter from './routers/views.js';
 import realTime from './routers/realtime.js';
 
+import Log from './logger/main.js';
+
+import ErrorsMiddleware from './routers/middlewares/error.js';
+import LoggerMiddleware from './routers/middlewares/logger.js';
+
 import { PORT } from './settings.js';
 
 const app = async () => {
+    Log.info('Iniciando servidor');
+
     // Setups controllers
     await Controllers.setup();
+
+    Log.info('controladores cargados');
 
     // create app
     const app = express();
     const http = Server(app);
     const io = new SocketIO(http);
+
+    app.use(LoggerMiddleware);
 
     app.use(express.json());
     app.use(express.urlencoded({ extended: true }));
@@ -37,6 +49,7 @@ const app = async () => {
     }))
     app.use(passport.initialize());
     app.use(passport.session());
+    app.use(compression());
 
     // public folder
     app.use(express.static('public'));
@@ -50,16 +63,18 @@ const app = async () => {
     // api routes
     app.use('/api', apiRouter);
 
+    app.use(ErrorsMiddleware);
+
     // socket connections
     realTime(io);
 
     process.on('exit', code => {
-        console.log(`programa cerrado con codigo: ${code}`)
+        Log.warn(`programa cerrado con codigo: ${code}`);
     })
 
     // initialize server 
     http.listen(PORT, () => {
-        console.log(`Listening on http://localhost:${PORT}`);
+        Log.info(`Listening on http://localhost:${PORT}`);
     })
 };
 
