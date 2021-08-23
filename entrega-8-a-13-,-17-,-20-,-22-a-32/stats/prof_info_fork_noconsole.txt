@@ -1,0 +1,1008 @@
+Statistical profiling result from isolate-0x5b12700-84437-v8.log, (4845 ticks, 6 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+   3850   79.5%          /usr/bin/node
+    104    2.1%          /usr/lib/x86_64-linux-gnu/libc-2.31.so
+      3    0.1%          /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28
+      1    0.0%          [vdso]
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+     43    0.9%    4.8%  LazyCompile: *wrap /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:101:22
+     38    0.8%    4.3%  LazyCompile: *next /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:478:32
+     35    0.7%    3.9%  LazyCompile: *parse /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:269:30
+     32    0.7%    3.6%  LazyCompile: *resolve node:path:1091:10
+     21    0.4%    2.4%  LazyCompile: *SourceNode_walk /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/source-map/lib/source-node.js:221:53
+      9    0.2%    1.0%  LazyCompile: *compile /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      7    0.1%    0.8%  LazyCompile: *next /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/router/index.js:176:16
+      6    0.1%    0.7%  RegExp: ^(?:[^\x00]*?(?=(\{\{)))
+      6    0.1%    0.7%  LazyCompile: *resolvePath /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:492:36
+      6    0.1%    0.7%  LazyCompile: *anonymous /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:12:42
+      6    0.1%    0.7%  LazyCompile: *<anonymous> /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/source-map/lib/source-node.js:174:29
+      5    0.1%    0.6%  LazyCompile: *normalizeString node:path:66:25
+      4    0.1%    0.5%  RegExp: ^(?:\{\{(~)?\^\s*(~)?\}\})
+      4    0.1%    0.5%  RegExp: (?:\r\n?|\n).*
+      4    0.1%    0.5%  LazyCompile: *parse /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/minimatch/minimatch.js:271:16
+      4    0.1%    0.5%  LazyCompile: *join node:path:1166:7
+      4    0.1%    0.5%  LazyCompile: *appendEscaped /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:416:40
+      4    0.1%    0.5%  LazyCompile: *Module._nodeModulePaths node:internal/modules/cjs/loader:629:37
+      3    0.1%    0.3%  RegExp: ^\.|this\b
+      3    0.1%    0.3%  LazyCompile: *renderView /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express-handlebars/lib/express-handlebars.js:183:19
+      3    0.1%    0.3%  LazyCompile: *relative node:path:1190:11
+      3    0.1%    0.3%  LazyCompile: *handle /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/router/index.js:136:31
+      3    0.1%    0.3%  LazyCompile: *generateList /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:143:38
+      3    0.1%    0.3%  LazyCompile: *anonymous /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:549:49
+      2    0.0%    0.2%  RegExp: ^\[.*\]$
+      2    0.0%    0.2%  RegExp: ^(?:undefined(?=([~}\s)])))
+      2    0.0%    0.2%  RegExp: ^(?:\}\}\}\})
+      2    0.0%    0.2%  RegExp: ^(?:\{\{(~)?\/)
+      2    0.0%    0.2%  RegExp: ^(?:\{\{(~)?#>)
+      2    0.0%    0.2%  RegExp: ^(?:\))
+      2    0.0%    0.2%  RegExp: ; *([!#$%&'*+.^_`|~0-9A-Za-z-]+) *= *("(?:[\u000b\u0020\u0021\u0023-\u005b\u005d-\u007e\u0080-\u00ff]|\\[\u000b\u0020-\u00ff])*"|[!#$%&'*+.^_`|~0-9A-Za-z-]+) *
+      2    0.0%    0.2%  RegExp: (^|\r?\n)\s*?$
+      2    0.0%    0.2%  LazyCompile: *template /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/runtime.js:52:18
+      2    0.0%    0.2%  LazyCompile: *resolvePossibleLambda /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:527:56
+      2    0.0%    0.2%  LazyCompile: *render /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express-handlebars/lib/express-handlebars.js:150:15
+      2    0.0%    0.2%  LazyCompile: *normalize node:path:1127:12
+      2    0.0%    0.2%  LazyCompile: *lookupProperty /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/runtime.js:118:44
+      2    0.0%    0.2%  LazyCompile: *emit node:events:343:44
+      2    0.0%    0.2%  LazyCompile: *accept /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:101:26
+      2    0.0%    0.2%  LazyCompile: *_write node:internal/streams/writable:283:16
+      2    0.0%    0.2%  LazyCompile: *WhitespaceControl.Program /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/whitespace-control.js:19:48
+      2    0.0%    0.2%  LazyCompile: *SourceNode /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/source-map/lib/source-node.js:35:20
+      2    0.0%    0.2%  LazyCompile: *Program /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:113:28
+      1    0.0%    0.1%  RegExp: ^\/?$
+      1    0.0%    0.1%  RegExp: ^.*[\.\/\\]
+      1    0.0%    0.1%  RegExp: ^(?:null(?=([~}\s)])))
+      1    0.0%    0.1%  RegExp: ^(?:as\s+\|)
+      1    0.0%    0.1%  RegExp: ^(?:\{\{(~)?\{)
+      1    0.0%    0.1%  RegExp: ^(?:\{\{(~)?\s*else\s*(~)?\}\})
+      1    0.0%    0.1%  RegExp: ^(?:\{\{(~)?\s*else\b)
+      1    0.0%    0.1%  RegExp: ^(?:\{\{(~)?\^)
+      1    0.0%    0.1%  RegExp: ^(?:\{\{(~)?\*?)
+      1    0.0%    0.1%  RegExp: ^(?:\{\{(~)?![\s\S]*?\}\})
+      1    0.0%    0.1%  RegExp: ^(?:\{\{(~)?!--)
+      1    0.0%    0.1%  RegExp: ^(?:\s+)
+      1    0.0%    0.1%  RegExp: ^(?:\.\.)
+      1    0.0%    0.1%  RegExp: ^(?:\()
+      1    0.0%    0.1%  RegExp: \r?\n\s*?$
+      1    0.0%    0.1%  RegExp: [^\t\x20-\x7e\x80-\xff]
+      1    0.0%    0.1%  RegExp: [&<>"'`=]
+      1    0.0%    0.1%  RegExp: ;\s*charset\s*=
+      1    0.0%    0.1%  LazyCompile: *yy.locInfo /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/base.js:42:25
+      1    0.0%    0.1%  LazyCompile: *send /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/response.js:107:25
+      1    0.0%    0.1%  LazyCompile: *replaceStack /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:892:38
+      1    0.0%    0.1%  LazyCompile: *realpathSync node:fs:2408:22
+      1    0.0%    0.1%  LazyCompile: *pushStackLiteral /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:877:46
+      1    0.0%    0.1%  LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      1    0.0%    0.1%  LazyCompile: *preparePath /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/helpers.js:63:21
+      1    0.0%    0.1%  LazyCompile: *popStack /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:960:30
+      1    0.0%    0.1%  LazyCompile: *opcode /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:347:26
+      1    0.0%    0.1%  LazyCompile: *mergeSource /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:267:36
+      1    0.0%    0.1%  LazyCompile: *lookupOnContext /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:448:44
+      1    0.0%    0.1%  LazyCompile: *invokeAmbiguous /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:699:44
+      1    0.0%    0.1%  LazyCompile: *get node:_http_incoming:108:16
+      1    0.0%    0.1%  LazyCompile: *fastparse /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/parseurl/index.js:95:20
+      1    0.0%    0.1%  LazyCompile: *extname node:path:1385:10
+      1    0.0%    0.1%  LazyCompile: *extend /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/utils.js:28:16
+      1    0.0%    0.1%  LazyCompile: *digest node:internal/crypto/hash:115:40
+      1    0.0%    0.1%  LazyCompile: *debug /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/debug/src/debug.js:65:17
+      1    0.0%    0.1%  LazyCompile: *createProtoAccessControl /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/internal/proto-access.js:19:34
+      1    0.0%    0.1%  LazyCompile: *contextName /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:990:36
+      1    0.0%    0.1%  LazyCompile: *castChunk /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:52:19
+      1    0.0%    0.1%  LazyCompile: *basename node:path:1306:11
+      1    0.0%    0.1%  LazyCompile: *_unrefTimer node:net:402:52
+      1    0.0%    0.1%  LazyCompile: *_getFile /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express-handlebars/lib/express-handlebars.js:299:17
+      1    0.0%    0.1%  LazyCompile: *SourceNode_add /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/source-map/lib/source-node.js:172:51
+      1    0.0%    0.1%  LazyCompile: *SourceLocation /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/helpers.js:32:24
+      1    0.0%    0.1%  LazyCompile: *ReadableState node:internal/streams/readable:78:23
+      1    0.0%    0.1%  LazyCompile: *MustacheStatement /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:215:48
+      1    0.0%    0.1%  LazyCompile: *Module._findPath node:internal/modules/cjs/loader:494:28
+
+ [C++]:
+   ticks  total  nonlib   name
+     97    2.0%   10.9%  __read
+     72    1.5%    8.1%  epoll_pwait
+     62    1.3%    7.0%  __pthread_cond_signal
+     57    1.2%    6.4%  fwrite
+     51    1.1%    5.7%  __write
+     26    0.5%    2.9%  __libc_read
+     24    0.5%    2.7%  __GI___pthread_mutex_unlock
+     20    0.4%    2.3%  __pthread_cond_wait
+     15    0.3%    1.7%  syscall
+     14    0.3%    1.6%  __libc_malloc
+     13    0.3%    1.5%  _IO_file_xsputn
+     12    0.2%    1.4%  __mprotect
+     11    0.2%    1.2%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)
+     10    0.2%    1.1%  __libc_open
+      5    0.1%    0.6%  __lll_lock_wait
+      4    0.1%    0.5%  std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const
+      4    0.1%    0.5%  fgets
+      4    0.1%    0.5%  cfree
+      4    0.1%    0.5%  __munmap
+      4    0.1%    0.5%  __GI___pthread_mutex_lock
+      3    0.1%    0.3%  operator new(unsigned long)
+      3    0.1%    0.3%  __mmap
+      2    0.0%    0.2%  std::ostream::sentry::sentry(std::ostream&)
+      2    0.0%    0.2%  operator delete(void*)
+      2    0.0%    0.2%  llseek
+      2    0.0%    0.2%  __close_nocancel
+      2    0.0%    0.2%  _IO_getline_info
+      1    0.0%    0.1%  writev
+      1    0.0%    0.1%  std::ostream::put(char)
+      1    0.0%    0.1%  std::ostream::operator<<(int)
+      1    0.0%    0.1%  std::ostream& std::ostream::_M_insert<long>(long)
+      1    0.0%    0.1%  std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
+      1    0.0%    0.1%  shutdown
+      1    0.0%    0.1%  epoll_ctl
+      1    0.0%    0.1%  __libc_write
+      1    0.0%    0.1%  __fxstat
+      1    0.0%    0.1%  __errno_location
+      1    0.0%    0.1%  __clock_gettime
+      1    0.0%    0.1%  _IO_sputbackc
+      1    0.0%    0.1%  _IO_padn
+      1    0.0%    0.1%  _IO_file_sync
+      1    0.0%    0.1%  _IO_do_write
+
+ [Summary]:
+   ticks  total  nonlib   name
+    341    7.0%   38.4%  JavaScript
+    540   11.1%   60.9%  C++
+    335    6.9%   37.8%  GC
+   3958   81.7%          Shared libraries
+      6    0.1%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+     97   27.6%    2.0%  __read
+     55   15.7%    1.1%  fwrite
+     45   12.8%    0.9%  __write
+     43   12.3%    0.9%  __pthread_cond_signal
+     15    4.3%    0.3%  syscall
+     13    3.7%    0.3%  _IO_file_xsputn
+     11    3.1%    0.2%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)
+     11    3.1%    0.2%  __libc_malloc
+     10    2.8%    0.2%  __libc_open
+      9    2.6%    0.2%  __GI___pthread_mutex_unlock
+      6    1.7%    0.1%  __mprotect
+      4    1.1%    0.1%  fgets
+      4    1.1%    0.1%  __lll_lock_wait
+      3    0.9%    0.1%  std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const
+      3    0.9%    0.1%  cfree
+      2    0.6%    0.0%  std::ostream::sentry::sentry(std::ostream&)
+      2    0.6%    0.0%  operator new(unsigned long)
+      2    0.6%    0.0%  llseek
+      2    0.6%    0.0%  __close_nocancel
+      2    0.6%    0.0%  _IO_getline_info
+      1    0.3%    0.0%  writev
+      1    0.3%    0.0%  std::ostream::operator<<(int)
+      1    0.3%    0.0%  std::ostream& std::ostream::_M_insert<long>(long)
+      1    0.3%    0.0%  std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
+      1    0.3%    0.0%  operator delete(void*)
+      1    0.3%    0.0%  __libc_write
+      1    0.3%    0.0%  __fxstat
+      1    0.3%    0.0%  __GI___pthread_mutex_lock
+      1    0.3%    0.0%  _IO_sputbackc
+      1    0.3%    0.0%  _IO_padn
+      1    0.3%    0.0%  _IO_file_sync
+      1    0.3%    0.0%  _IO_do_write
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   3850   79.5%  /usr/bin/node
+   2112   54.9%    /usr/bin/node
+    384   18.2%      LazyCompile: ~compileFunction node:vm:308:25
+    377   98.2%        LazyCompile: ~wrapSafe node:internal/modules/cjs/loader:1017:18
+    377  100.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1055:37
+    377  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      7    1.8%        LazyCompile: *Module._compile node:internal/modules/cjs/loader:1055:37
+      7  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      7  100.0%            LazyCompile: ~Module.load node:internal/modules/cjs/loader:969:33
+     91    4.3%      LazyCompile: ~memoryUsage node:internal/process/per_thread:165:23
+     91  100.0%        LazyCompile: ~<anonymous> file:///home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/routers/views.js:30:34
+     91  100.0%          LazyCompile: ~handle /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/router/layer.js:86:49
+     91  100.0%            LazyCompile: ~next /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/router/route.js:114:16
+     75    3.6%      /usr/bin/node
+      5    6.7%        LazyCompile: ~expressInit /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/middleware/init.js:29:30
+      5  100.0%          LazyCompile: *next /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/router/index.js:176:16
+      5  100.0%            LazyCompile: ~query /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/middleware/query.js:39:24
+      5    6.7%        LazyCompile: *quotedString /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:118:38
+      5  100.0%          LazyCompile: ~pushSource /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:881:34
+      5  100.0%            LazyCompile: ~append /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:394:26
+      4    5.3%        LazyCompile: ~header /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/response.js:754:29
+      3   75.0%          LazyCompile: ~contentType /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/response.js:594:32
+      3  100.0%            LazyCompile: ~send /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/response.js:107:25
+      1   25.0%          LazyCompile: ~send /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/response.js:107:25
+      1  100.0%            LazyCompile: ~done /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/response.js:1006:27
+      3    4.0%        LazyCompile: ~parseAcceptEncoding /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/negotiator/lib/encoding.js:31:29
+      3  100.0%          LazyCompile: ~preferredEncodings /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/negotiator/lib/encoding.js:138:28
+      3  100.0%            LazyCompile: ~encodings /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/negotiator/index.js:55:52
+      3    4.0%        LazyCompile: ~parse /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/minimatch/minimatch.js:271:16
+      3  100.0%          /usr/bin/node
+      3  100.0%            LazyCompile: ~<anonymous> /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/minimatch/minimatch.js:181:26
+      3    4.0%        LazyCompile: *parse /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/minimatch/minimatch.js:271:16
+      3  100.0%          /usr/bin/node
+      3  100.0%            LazyCompile: ~<anonymous> /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/minimatch/minimatch.js:181:26
+      2    2.7%        LazyCompile: ~readPackage node:internal/modules/cjs/loader:290:21
+      2  100.0%          LazyCompile: ~readPackageScope node:internal/modules/cjs/loader:321:26
+      2  100.0%            LazyCompile: ~trySelf node:internal/modules/cjs/loader:441:17
+      2    2.7%        LazyCompile: ~pipe /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/send/index.js:510:43
+      2  100.0%          LazyCompile: ~serveStatic /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/serve-static/index.js:72:31
+      2  100.0%            LazyCompile: *next /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/router/index.js:176:16
+      2    2.7%        LazyCompile: ~finish /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/glob/common.js:116:17
+      2  100.0%          LazyCompile: ~Glob._finish /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/glob/glob.js:186:35
+      2  100.0%            LazyCompile: ~done /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/glob/glob.js:172:17
+      2    2.7%        LazyCompile: ~createError /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/http-errors/index.js:48:22
+      2  100.0%          LazyCompile: ~error /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/send/index.js:267:45
+      2  100.0%            LazyCompile: ~onStatError /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/send/index.js:416:57
+      2    2.7%        LazyCompile: ~checkInvalidHeaderChar node:_http_common:232:32
+      2  100.0%          LazyCompile: ~<anonymous> node:_http_outgoing:561:45
+      2  100.0%            LazyCompile: ~setHeader node:_http_outgoing:571:57
+      2    2.7%        LazyCompile: ~FastBuffer node:internal/buffer:958:14
+      1   50.0%          LazyCompile: ~randomBytes node:internal/crypto/random:90:21
+      1  100.0%            LazyCompile: ~randomBytesSync /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/random-bytes/index.js:72:25
+      1   50.0%          LazyCompile: ~createUnsafeBuffer node:internal/buffer:1059:28
+      1  100.0%            LazyCompile: ~allocUnsafeSlow node:buffer:382:50
+      2    2.7%        LazyCompile: ~<anonymous> node:internal/fs/utils:357:35
+      2  100.0%          LazyCompile: ~<anonymous> node:internal/fs/utils:668:38
+      2  100.0%            LazyCompile: ~<anonymous> node:internal/fs/utils:680:42
+      2    2.7%        LazyCompile: ~<anonymous> /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/connection/connect.js:87:41
+      2  100.0%          LazyCompile: ~prepareHandshakeDocument /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/connection/connect.js:159:34
+      2  100.0%            LazyCompile: ~performInitialHandshake /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/connection/connect.js:70:33
+      2    2.7%        LazyCompile: *next /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:478:32
+      2  100.0%          LazyCompile: *parse /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:269:30
+      2  100.0%            LazyCompile: ~parseWithoutProcessing /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/base.js:33:32
+      1    1.3%        LazyCompile: ~wrapHelpersToPassLookupProperty /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/runtime.js:359:41
+      1  100.0%          LazyCompile: ~ret._setup /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/runtime.js:217:25
+      1  100.0%            LazyCompile: ~ret /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/runtime.js:188:15
+      1    1.3%        LazyCompile: ~unfqdn node:tls:149:16
+      1  100.0%          LazyCompile: ~splitHost node:tls:159:19
+      1  100.0%            LazyCompile: ~checkServerIdentity node:tls:230:59
+      1    1.3%        LazyCompile: ~scopedId /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/ast.js:14:32
+      1  100.0%          LazyCompile: ~PathExpression /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:289:42
+      1  100.0%            LazyCompile: ~accept /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:101:26
+      1    1.3%        LazyCompile: ~quotedString /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:118:38
+      1  100.0%          LazyCompile: ~pushSource /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:881:34
+      1  100.0%            LazyCompile: ~appendEscaped /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:416:40
+      1    1.3%        LazyCompile: ~populateMaps /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/mime-types/index.js:154:23
+      1  100.0%          Function: ~<anonymous> /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/mime-types/index.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1055:37
+      1    1.3%        LazyCompile: ~populateConstructorExports /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/http-errors/index.js:242:37
+      1  100.0%          Function: ~<anonymous> /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/http-errors/index.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1055:37
+      1    1.3%        LazyCompile: ~parseIndexOptions /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/utils.js:169:33
+      1  100.0%          LazyCompile: ~CreateIndexesOperation /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/operations/create_indexes.js:45:14
+      1  100.0%            LazyCompile: ~Collection.createIndex /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/collection.js:1243:44
+      1    1.3%        LazyCompile: ~next /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:478:32
+      1  100.0%          LazyCompile: ~lex /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:525:30
+      1  100.0%            LazyCompile: ~lex /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:295:25
+      1    1.3%        LazyCompile: ~mergeSource /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:267:36
+      1  100.0%          LazyCompile: ~createFunctionContext /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:216:56
+      1  100.0%            LazyCompile: ~compile /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1    1.3%        LazyCompile: ~lookup /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/mime/mime.js:102:19
+      1  100.0%          LazyCompile: ~header /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/response.js:754:29
+      1  100.0%            LazyCompile: ~contentType /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/response.js:594:32
+      1    1.3%        LazyCompile: ~link node:internal/modules/esm/module_job:66:18
+      1  100.0%          /usr/bin/node
+      1    1.3%        LazyCompile: ~isBad node:tls:184:17
+      1  100.0%          /usr/bin/node
+      1  100.0%            LazyCompile: ~check node:tls:166:15
+      1    1.3%        LazyCompile: ~getTemplates /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express-handlebars/lib/express-handlebars.js:135:21
+      1  100.0%          /usr/bin/node
+      1    1.3%        LazyCompile: ~getTemplate /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express-handlebars/lib/express-handlebars.js:108:20
+      1  100.0%          LazyCompile: ~render /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express-handlebars/lib/express-handlebars.js:150:15
+      1  100.0%            LazyCompile: ~renderView /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express-handlebars/lib/express-handlebars.js:183:19
+      1    1.3%        LazyCompile: ~format /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/content-type/index.js:65:17
+      1  100.0%          LazyCompile: ~setCharset /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/utils.js:250:41
+      1  100.0%            LazyCompile: ~send /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/response.js:107:25
+      1    1.3%        LazyCompile: ~compileFunction node:vm:308:25
+      1  100.0%          LazyCompile: ~wrapSafe node:internal/modules/cjs/loader:1017:18
+      1  100.0%            LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1055:37
+      1    1.3%        LazyCompile: ~append /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/vary/index.js:38:17
+      1  100.0%          LazyCompile: ~vary /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/vary/index.js:133:15
+      1  100.0%            LazyCompile: ~onResponseHeaders /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/compression/index.js:140:47
+      1    1.3%        LazyCompile: ~_renderTemplate /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express-handlebars/lib/express-handlebars.js:260:18
+      1  100.0%          LazyCompile: ~render /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express-handlebars/lib/express-handlebars.js:150:15
+      1  100.0%            /usr/bin/node
+      1    1.3%        LazyCompile: ~_command /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/wireprotocol/command.js:41:18
+      1  100.0%          LazyCompile: ~command /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/wireprotocol/command.js:19:17
+      1  100.0%            LazyCompile: ~command /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/cmap/connection.js:170:10
+      1    1.3%        LazyCompile: ~SourceNode_add /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/source-map/lib/source-node.js:172:51
+      1  100.0%          LazyCompile: ~SourceNode /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/source-map/lib/source-node.js:35:20
+      1  100.0%            LazyCompile: ~wrap /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:101:22
+      1    1.3%        LazyCompile: ~Monitor /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/sdam/monitor.js:45:14
+      1  100.0%          LazyCompile: ~Server /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/sdam/server.js:81:14
+      1  100.0%            LazyCompile: ~createAndConnectServer /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/sdam/topology.js:849:32
+      1    1.3%        LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:494:28
+      1  100.0%          LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:757:24
+      1    1.3%        LazyCompile: ~<anonymous> /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/sdam/topology_description.js:403:13
+      1  100.0%          /usr/bin/node
+      1  100.0%            LazyCompile: ~updateRsFromPrimary /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/sdam/topology_description.js:339:29
+      1    1.3%        LazyCompile: *header /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/response.js:754:29
+      1  100.0%          LazyCompile: *send /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/response.js:107:25
+      1  100.0%            LazyCompile: *renderView /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express-handlebars/lib/express-handlebars.js:183:19
+      1    1.3%        LazyCompile: *compileFunction node:vm:308:25
+      1  100.0%          LazyCompile: ~wrapSafe node:internal/modules/cjs/loader:1017:18
+      1  100.0%            LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1055:37
+      1    1.3%        LazyCompile: *compile /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1  100.0%          LazyCompile: ~compileInput /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+      1  100.0%            LazyCompile: ~ret /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:515:15
+      1    1.3%        LazyCompile: *appendEscaped /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:416:40
+      1  100.0%          LazyCompile: *compile /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1  100.0%            LazyCompile: ~compileInput /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+      1    1.3%        LazyCompile: *Module._findPath node:internal/modules/cjs/loader:494:28
+      1  100.0%          LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:757:24
+      1    1.3%        Function: ~<anonymous> node:zlib:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%            LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:246:25
+      1    1.3%        Function: ~<anonymous> /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/socket.io/node_modules/debug/src/node.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1110:37
+     71    3.4%      LazyCompile: ~close node:internal/fs/read_file_context:111:8
+     71  100.0%        LazyCompile: ~readFileAfterRead node:internal/fs/read_file_context:25:27
+     68    3.2%      LazyCompile: ~read node:internal/fs/read_file_context:85:7
+     68  100.0%        LazyCompile: ~readFileAfterStat node:fs:326:27
+     64    3.0%      LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+     55   85.9%        LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      7   12.7%          Function: ~<anonymous> node:crypto:1:1
+      7  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      4    7.3%          Function: ~<anonymous> node:internal/modules/esm/loader:1:1
+      4  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      3    5.5%          LazyCompile: ~initializeCJSLoader node:internal/bootstrap/pre_execution:421:29
+      3  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:22:36
+      3    5.5%          Function: ~<anonymous> node:internal/child_process:1:1
+      3  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      3    5.5%          Function: ~<anonymous> node:http:1:1
+      3  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      3    5.5%          Function: ~<anonymous> node:_http_client:1:1
+      3  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      3    5.5%          Function: ~<anonymous> node:_http_agent:1:1
+      3  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2    3.6%          LazyCompile: ~initCJSParse node:internal/modules/esm/translators:67:28
+      2  100.0%            LazyCompile: ~commonjsStrategy node:internal/modules/esm/translators:175:60
+      2    3.6%          Function: ~<anonymous> node:tls:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2    3.6%          Function: ~<anonymous> node:internal/modules/esm/get_source:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2    3.6%          Function: ~<anonymous> node:child_process:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2    3.6%          Function: ~<anonymous> node:assert:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.8%          LazyCompile: ~setupInspectorHooks node:internal/bootstrap/pre_execution:232:29
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:22:36
+      1    1.8%          LazyCompile: ~listenInCluster node:net:1357:25
+      1  100.0%            LazyCompile: ~Server.listen node:net:1399:35
+      1    1.8%          LazyCompile: ~lazyRequire node:internal/crypto/util:67:21
+      1  100.0%            LazyCompile: ~get node:crypto:287:8
+      1    1.8%          LazyCompile: ~lazyLoadStreams node:fs:2841:25
+      1  100.0%            LazyCompile: ~get ReadStream node:fs:2984:17
+      1    1.8%          LazyCompile: ~initializeSourceMapsHandlers node:internal/bootstrap/pre_execution:458:38
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:22:36
+      1    1.8%          LazyCompile: ~initializeReport node:internal/bootstrap/pre_execution:182:26
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:22:36
+      1    1.8%          LazyCompile: ~get BlockList node:net:1764:16
+      1  100.0%            /usr/bin/node
+      1    1.8%          Function: ~<anonymous> node:net:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.8%          Function: ~<anonymous> node:module:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.8%          Function: ~<anonymous> node:internal/modules/esm/translators:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.8%          Function: ~<anonymous> node:internal/crypto/util:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.8%          Function: ~<anonymous> node:internal/crypto/hkdf:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.8%          Function: ~<anonymous> node:internal/cluster/primary:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.8%          Function: ~<anonymous> node:internal/bootstrap/pre_execution:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.8%          Function: ~<anonymous> node:https:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.8%          Function: ~<anonymous> node:_tls_wrap:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.8%          Function: ~<anonymous> node:_tls_common:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.8%          Function: ~<anonymous> node:_http_server:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.8%          Function: ~<anonymous> node:_http_common:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      9   14.1%        LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:246:25
+      9  100.0%          LazyCompile: ~loadNativeModule node:internal/modules/cjs/helpers:36:26
+      6   66.7%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:757:24
+      3   33.3%            LazyCompile: ~builtinStrategy node:internal/modules/esm/translators:276:58
+     61    2.9%      LazyCompile: ~cpus node:os:133:14
+     61  100.0%        LazyCompile: ~<anonymous> file:///home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/routers/views.js:30:34
+     61  100.0%          LazyCompile: ~handle /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/router/layer.js:86:49
+     61  100.0%            LazyCompile: ~next /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/router/route.js:114:16
+     49    2.3%      LazyCompile: *next /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:478:32
+     49  100.0%        LazyCompile: *parse /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:269:30
+     38   77.6%          LazyCompile: ~parseWithoutProcessing /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/base.js:33:32
+     38  100.0%            LazyCompile: ~parse /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/base.js:51:15
+     11   22.4%          LazyCompile: *render /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express-handlebars/lib/express-handlebars.js:150:15
+     11  100.0%            /usr/bin/node
+     48    2.3%      LazyCompile: *compile /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+     34   70.8%        LazyCompile: ~compileInput /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+     34  100.0%          LazyCompile: ~ret /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:515:15
+     34  100.0%            LazyCompile: ~_renderTemplate /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express-handlebars/lib/express-handlebars.js:260:18
+     14   29.2%        LazyCompile: *render /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express-handlebars/lib/express-handlebars.js:150:15
+     14  100.0%          /usr/bin/node
+     45    2.1%      LazyCompile: ~writevGeneric node:internal/stream_base_commons:126:23
+     45  100.0%        LazyCompile: ~Socket._writeGeneric node:net:754:42
+     45  100.0%          LazyCompile: ~Socket._writev node:net:786:36
+     45  100.0%            LazyCompile: ~doWrite node:internal/streams/writable:398:17
+     31    1.5%      LazyCompile: ~Hash node:internal/crypto/hash:58:14
+     31  100.0%        LazyCompile: ~createHash node:crypto:129:20
+     23   74.2%          LazyCompile: ~hash /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express-session/index.js:596:14
+     13   56.5%            LazyCompile: ~generate /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express-session/index.js:363:22
+      9   39.1%            LazyCompile: ~isModified /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express-session/index.js:425:24
+      1    4.3%            LazyCompile: *session /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express-session/index.js:179:26
+      8   25.8%          LazyCompile: ~entitytag /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/etag/index.js:39:20
+      8  100.0%            LazyCompile: ~etag /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/etag/index.js:70:15
+     28    1.3%      LazyCompile: *SourceNode_walk /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/source-map/lib/source-node.js:221:53
+     22   78.6%        LazyCompile: *SourceNode_walk /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/source-map/lib/source-node.js:221:53
+     21   95.5%          LazyCompile: *SourceNode_walk /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/source-map/lib/source-node.js:221:53
+     21  100.0%            LazyCompile: *SourceNode_walk /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/source-map/lib/source-node.js:221:53
+      1    4.5%          LazyCompile: ~SourceNode_toString /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/source-map/lib/source-node.js:318:61
+      1  100.0%            /usr/bin/node
+      6   21.4%        LazyCompile: ~SourceNode_toString /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/source-map/lib/source-node.js:318:61
+      6  100.0%          /usr/bin/node
+      6  100.0%            LazyCompile: *compile /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+     25    1.2%      LazyCompile: ~compression /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/compression/index.js:59:31
+     20   80.0%        LazyCompile: *next /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/router/index.js:176:16
+     20  100.0%          LazyCompile: ~strategy.pass /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/passport/lib/middleware/authenticate.js:342:31
+     20  100.0%            LazyCompile: ~SessionStrategy.authenticate /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/passport/lib/strategies/session.js:44:50
+      5   20.0%        LazyCompile: ~handle /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/router/layer.js:86:49
+      5  100.0%          LazyCompile: ~trim_prefix /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/router/index.js:288:23
+      5  100.0%            LazyCompile: ~<anonymous> /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/router/index.js:275:64
+     24    1.1%      LazyCompile: ~readFile node:fs:373:18
+     24  100.0%        LazyCompile: ~go$readFile /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/graceful-fs/graceful-fs.js:117:26
+     24  100.0%          LazyCompile: ~readFile /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/graceful-fs/graceful-fs.js:111:21
+     24  100.0%            LazyCompile: ~<anonymous> node:internal/util:332:24
+     24    1.1%      LazyCompile: *resolvePath /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:492:36
+     18   75.0%        LazyCompile: *lookupOnContext /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:448:44
+     18  100.0%          LazyCompile: *compile /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+     10   55.6%            LazyCompile: *render /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express-handlebars/lib/express-handlebars.js:150:15
+      8   44.4%            LazyCompile: ~compileInput /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+      6   25.0%        LazyCompile: ~lookupOnContext /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:448:44
+      6  100.0%          LazyCompile: *compile /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      6  100.0%            LazyCompile: ~compileInput /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+
+    104    2.1%  /usr/lib/x86_64-linux-gnu/libc-2.31.so
+     66   63.5%    /usr/bin/node
+     21   31.8%      /usr/bin/node
+      7   33.3%        LazyCompile: ~FastBuffer node:internal/buffer:958:14
+      7  100.0%          LazyCompile: ~createUnsafeBuffer node:internal/buffer:1059:28
+      5   71.4%            LazyCompile: ~createPool node:buffer:150:20
+      2   28.6%            LazyCompile: ~allocUnsafeSlow node:buffer:382:50
+      2    9.5%        LazyCompile: *quotedString /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:118:38
+      2  100.0%          LazyCompile: ~pushSource /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:881:34
+      2  100.0%            LazyCompile: ~append /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:394:26
+      2    9.5%        LazyCompile: *parse /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:269:30
+      2  100.0%          LazyCompile: ~parseWithoutProcessing /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/base.js:33:32
+      2  100.0%            LazyCompile: ~parse /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/base.js:51:15
+      2    9.5%        LazyCompile: *appendEscaped /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:416:40
+      2  100.0%          LazyCompile: *compile /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      2  100.0%            LazyCompile: *render /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express-handlebars/lib/express-handlebars.js:150:15
+      1    4.8%        LazyCompile: ~stat node:internal/modules/cjs/loader:151:14
+      1  100.0%          LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:494:28
+      1  100.0%            LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1    4.8%        LazyCompile: ~quotedString /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:118:38
+      1  100.0%          LazyCompile: ~pushSource /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:881:34
+      1  100.0%            LazyCompile: ~appendEscaped /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:416:40
+      1    4.8%        LazyCompile: ~prepareMustache /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/helpers.js:99:25
+      1  100.0%          LazyCompile: *anonymous /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:12:42
+      1  100.0%            LazyCompile: *parse /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:269:30
+      1    4.8%        LazyCompile: ~pipe /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/send/index.js:510:43
+      1  100.0%          LazyCompile: ~serveStatic /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/serve-static/index.js:72:31
+      1  100.0%            LazyCompile: *next /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/router/index.js:176:16
+      1    4.8%        LazyCompile: ~parse /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:269:30
+      1  100.0%          LazyCompile: ~parseWithoutProcessing /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/base.js:33:32
+      1  100.0%            LazyCompile: ~parse /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/base.js:51:15
+      1    4.8%        LazyCompile: ~<anonymous> node:internal/fs/utils:357:35
+      1  100.0%          LazyCompile: ~<anonymous> node:internal/fs/utils:668:38
+      1  100.0%            LazyCompile: ~<anonymous> node:internal/fs/utils:680:42
+      1    4.8%        LazyCompile: *next /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:478:32
+      1  100.0%          LazyCompile: *parse /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:269:30
+      1  100.0%            LazyCompile: ~parseWithoutProcessing /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/base.js:33:32
+      1    4.8%        LazyCompile: *compile /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1  100.0%          LazyCompile: ~compileInput /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+      1  100.0%            LazyCompile: ~ret /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:515:15
+      3    4.5%      LazyCompile: ~compression /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/compression/index.js:59:31
+      3  100.0%        LazyCompile: *next /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/router/index.js:176:16
+      3  100.0%          LazyCompile: ~strategy.pass /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/passport/lib/middleware/authenticate.js:342:31
+      3  100.0%            LazyCompile: ~SessionStrategy.authenticate /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/passport/lib/strategies/session.js:44:50
+      3    4.5%      LazyCompile: *resolve node:path:1091:10
+      1   33.3%        LazyCompile: ~setopts /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/glob/common.js:47:18
+      1  100.0%          LazyCompile: ~Glob /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/glob/glob.js:118:15
+      1  100.0%            LazyCompile: ~glob /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/glob/glob.js:63:15
+      1   33.3%        LazyCompile: ~lookup /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/view.js:104:40
+      1  100.0%          LazyCompile: ~View /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/view.js:52:14
+      1  100.0%            LazyCompile: ~render /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/application.js:531:29
+      1   33.3%        LazyCompile: *renderView /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express-handlebars/lib/express-handlebars.js:183:19
+      1  100.0%          /usr/bin/node
+      3    4.5%      LazyCompile: *realpathSync node:fs:2408:22
+      2   66.7%        LazyCompile: *Module._findPath node:internal/modules/cjs/loader:494:28
+      2  100.0%          LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1   50.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:757:24
+      1   50.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      1   33.3%        LazyCompile: ~toRealPath node:internal/modules/cjs/loader:393:20
+      1  100.0%          LazyCompile: ~tryFile node:internal/modules/cjs/loader:384:17
+      1  100.0%            LazyCompile: ~tryExtensions node:internal/modules/cjs/loader:400:23
+      3    4.5%      LazyCompile: *compile /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      2   66.7%        LazyCompile: ~compileInput /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+      2  100.0%          LazyCompile: ~ret /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:515:15
+      2  100.0%            LazyCompile: ~_renderTemplate /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express-handlebars/lib/express-handlebars.js:260:18
+      1   33.3%        LazyCompile: *render /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express-handlebars/lib/express-handlebars.js:150:15
+      1  100.0%          /usr/bin/node
+      2    3.0%      LazyCompile: *PathExpression /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:289:42
+      1   50.0%        LazyCompile: *accept /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:101:26
+      1  100.0%          LazyCompile: ~ambiguousSexpr /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:248:42
+      1  100.0%            LazyCompile: *MustacheStatement /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:215:48
+      1   50.0%        LazyCompile: *MustacheStatement /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:215:48
+      1  100.0%          LazyCompile: *Program /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:113:28
+      1  100.0%            LazyCompile: *accept /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:101:26
+      1    1.5%      LazyCompile: ~write_ node:_http_outgoing:727:16
+      1  100.0%        LazyCompile: ~end node:_http_outgoing:830:45
+      1  100.0%          LazyCompile: ~end /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express-session/index.js:250:27
+      1  100.0%            LazyCompile: ~end /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/compression/index.js:92:28
+      1    1.5%      LazyCompile: ~statSync node:fs:1528:18
+      1  100.0%        LazyCompile: ~tryStatSync node:internal/modules/esm/resolve:156:3
+      1  100.0%          LazyCompile: ~finalizeResolution node:internal/modules/esm/resolve:362:28
+      1  100.0%            LazyCompile: ~moduleResolve node:internal/modules/esm/resolve:852:23
+      1    1.5%      LazyCompile: ~setupParams /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1034:36
+      1  100.0%        LazyCompile: ~setupHelperArgs /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1104:44
+      1  100.0%          LazyCompile: ~setupHelper /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1020:36
+      1  100.0%            LazyCompile: ~invokeAmbiguous /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:699:44
+      1    1.5%      LazyCompile: ~setStreamTimeout node:internal/stream_base_commons:254:26
+      1  100.0%        LazyCompile: ~makeConnection /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/connection/connect.js:254:24
+      1  100.0%          LazyCompile: ~connect /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/connection/connect.js:18:17
+      1  100.0%            LazyCompile: ~checkServer /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/sdam/monitor.js:177:21
+      1    1.5%      LazyCompile: ~resolvePossibleLambda /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:527:56
+      1  100.0%        LazyCompile: *compile /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1  100.0%          LazyCompile: ~compileInput /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+      1  100.0%            LazyCompile: ~ret /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:515:15
+      1    1.5%      LazyCompile: ~realpathSync node:fs:2408:22
+      1  100.0%        LazyCompile: ~toRealPath node:internal/modules/cjs/loader:393:20
+      1  100.0%          LazyCompile: ~tryFile node:internal/modules/cjs/loader:384:17
+      1  100.0%            LazyCompile: ~tryPackage node:internal/modules/cjs/loader:338:20
+      1    1.5%      LazyCompile: ~randomBytes node:internal/crypto/random:90:21
+      1  100.0%        LazyCompile: ~randomBytesSync /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/random-bytes/index.js:72:25
+      1  100.0%          LazyCompile: ~uidSync /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/uid-safe/index.js:75:18
+      1  100.0%            LazyCompile: ~generateSessionId /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express-session/index.js:518:27
+      1    1.5%      LazyCompile: ~packageExportsResolve node:internal/modules/esm/resolve:604:31
+      1  100.0%        LazyCompile: ~packageResolve node:internal/modules/esm/resolve:773:24
+      1  100.0%          LazyCompile: ~moduleResolve node:internal/modules/esm/resolve:852:23
+      1  100.0%            LazyCompile: ~defaultResolve node:internal/modules/esm/resolve:915:24
+      1    1.5%      LazyCompile: ~normalizeEncoding node:internal/util:146:27
+      1  100.0%        LazyCompile: ~validateEncoding node:internal/validators:189:26
+      1  100.0%          LazyCompile: ~update node:internal/crypto/hash:95:40
+      1  100.0%            LazyCompile: ~HMAC /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/auth/scram.js:266:14
+      1    1.5%      LazyCompile: ~jsonParser /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/body-parser/lib/types/json.js:98:30
+      1  100.0%        LazyCompile: ~handle /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%          LazyCompile: ~trim_prefix /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/router/index.js:288:23
+      1  100.0%            LazyCompile: ~<anonymous> /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/router/index.js:275:64
+      1    1.5%      LazyCompile: ~hash /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express-session/index.js:596:14
+      1  100.0%        LazyCompile: ~isModified /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express-session/index.js:425:24
+      1  100.0%          LazyCompile: ~shouldSave /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express-session/index.js:440:24
+      1  100.0%            LazyCompile: ~end /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express-session/index.js:250:27
+      1    1.5%      LazyCompile: ~find_package_json_with_name /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/require_optional/index.js:27:43
+      1  100.0%        LazyCompile: ~require_optional /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/require_optional/index.js:65:32
+      1  100.0%          LazyCompile: ~retrieveSnappy /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/connection/utils.js:37:24
+      1  100.0%            Function: ~<anonymous> /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/wireprotocol/compression.js:1:1
+      1    1.5%      LazyCompile: ~emitBeforeScript node:internal/async_hooks:499:26
+      1  100.0%        LazyCompile: ~processTicksAndRejections node:internal/process/task_queues:68:35
+      1    1.5%      LazyCompile: ~decode /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/send/index.js:987:17
+      1  100.0%        LazyCompile: ~pipe /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/send/index.js:510:43
+      1  100.0%          LazyCompile: ~serveStatic /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/serve-static/index.js:72:31
+      1  100.0%            LazyCompile: *next /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/router/index.js:176:16
+      1    1.5%      LazyCompile: ~command /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/sdam/server.js:244:10
+      1  100.0%        LazyCompile: ~<anonymous> /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/sdam/topology.js:667:78
+      1  100.0%          LazyCompile: ~processWaitQueue /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/sdam/topology.js:1009:26
+      1  100.0%            LazyCompile: ~serverUpdateHandler /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/sdam/topology.js:512:22
+      1    1.5%      LazyCompile: ~clearTimeout node:timers:184:22
+      1  100.0%        LazyCompile: ~setStreamTimeout node:internal/stream_base_commons:254:26
+      1  100.0%          LazyCompile: ~connectHandler /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/connection/connect.js:314:26
+      1  100.0%            LazyCompile: ~onceWrapper node:events:508:21
+      1    1.5%      LazyCompile: ~_write /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/cmap/message_stream.js:38:9
+      1  100.0%        LazyCompile: ~writeOrBuffer node:internal/streams/writable:365:23
+      1  100.0%          LazyCompile: ~_write node:internal/streams/writable:283:16
+      1  100.0%            LazyCompile: ~Writable.write node:internal/streams/writable:333:36
+      1    1.5%      LazyCompile: ~Timestamp.negate /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/bson/lib/bson/timestamp.js:329:38
+      1  100.0%        LazyCompile: ~Timestamp.subtract /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/bson/lib/bson/timestamp.js:382:40
+      1  100.0%          LazyCompile: ~Timestamp.compare /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/bson/lib/bson/timestamp.js:301:39
+      1  100.0%            LazyCompile: ~Timestamp.greaterThan /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/bson/lib/bson/timestamp.js:279:43
+      1    1.5%      LazyCompile: ~Server node:_http_server:371:16
+      1  100.0%        LazyCompile: ~app file:///home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/app.js:25:13
+      1  100.0%          /usr/bin/node
+      1    1.5%      LazyCompile: ~Module._load node:internal/modules/cjs/loader:757:24
+      1  100.0%        LazyCompile: ~Module.require node:internal/modules/cjs/loader:997:36
+      1  100.0%          LazyCompile: ~require node:internal/modules/cjs/helpers:93:31
+      1  100.0%            Function: ~<anonymous> /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/pino/lib/tools.js:1:1
+      1    1.5%      LazyCompile: ~Duplex node:internal/streams/duplex:52:16
+      1  100.0%        LazyCompile: ~Socket node:net:283:16
+      1  100.0%          LazyCompile: ~WriteStream node:tty:85:21
+      1  100.0%            LazyCompile: ~createWritableStdioStream node:internal/bootstrap/switches/is_main_thread:41:35
+      1    1.5%      LazyCompile: *resolvePossibleLambda /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:527:56
+      1  100.0%        LazyCompile: *compile /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1  100.0%          LazyCompile: ~compileInput /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+      1  100.0%            LazyCompile: ~ret /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:515:15
+      1    1.5%      LazyCompile: *resolvePath /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:492:36
+      1  100.0%        LazyCompile: *lookupOnContext /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:448:44
+      1  100.0%          LazyCompile: *compile /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1  100.0%            LazyCompile: ~compileInput /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+      1    1.5%      LazyCompile: *join node:path:1166:7
+      1  100.0%        LazyCompile: ~pipe /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/send/index.js:510:43
+      1  100.0%          LazyCompile: ~serveStatic /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/serve-static/index.js:72:31
+      1  100.0%            LazyCompile: *next /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/router/index.js:176:16
+      1    1.5%      LazyCompile: *internalNameLookup /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:66:50
+      1  100.0%        LazyCompile: ~nameLookup /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:29:34
+      1  100.0%          LazyCompile: ~<anonymous> /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:505:34
+      1  100.0%            LazyCompile: ~replaceStack /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:892:38
+      1    1.5%      LazyCompile: *getPathFromURLPosix node:internal/url:1404:29
+      1  100.0%        LazyCompile: ~fileURLToPath node:internal/url:1422:23
+      1  100.0%          LazyCompile: ~getPackageScopeConfig node:internal/modules/esm/resolve:220:31
+      1  100.0%            LazyCompile: ~getPackageType node:internal/modules/esm/resolve:720:24
+      1    1.5%      LazyCompile: *extend /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/utils.js:28:16
+      1  100.0%        LazyCompile: ~createNewLookupObject /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/internal/create-new-lookup-object.js:15:31
+      1  100.0%          LazyCompile: ~createProtoAccessControl /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/internal/proto-access.js:19:34
+      1  100.0%            LazyCompile: ~ret._setup /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/runtime.js:217:25
+      1    1.5%      LazyCompile: *dirname node:path:1275:10
+      1  100.0%        LazyCompile: ~lookup /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/view.js:104:40
+      1  100.0%          LazyCompile: ~View /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/view.js:52:14
+      1  100.0%            LazyCompile: ~render /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/application.js:531:29
+      1    1.5%      LazyCompile: *aliasable /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1006:32
+      1  100.0%        LazyCompile: ~setupHelper /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1020:36
+      1  100.0%          LazyCompile: ~invokeAmbiguous /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:699:44
+      1  100.0%            LazyCompile: *compile /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1    1.5%      LazyCompile: *Module._nodeModulePaths node:internal/modules/cjs/loader:629:37
+      1  100.0%        LazyCompile: ~Module.load node:internal/modules/cjs/loader:969:33
+      1  100.0%          LazyCompile: ~Module._load node:internal/modules/cjs/loader:757:24
+      1  100.0%            LazyCompile: ~Module.require node:internal/modules/cjs/loader:997:36
+      9    8.7%    LazyCompile: *cpus node:os:133:14
+      9  100.0%      LazyCompile: ~<anonymous> file:///home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/routers/views.js:30:34
+      9  100.0%        LazyCompile: ~handle /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/router/layer.js:86:49
+      9  100.0%          LazyCompile: ~next /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/router/route.js:114:16
+      9  100.0%            LazyCompile: ~<anonymous> file:///home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/routers/middlewares/auth.js:14:12
+      4    3.8%    LazyCompile: *compileFunction node:vm:308:25
+      4  100.0%      LazyCompile: ~wrapSafe node:internal/modules/cjs/loader:1017:18
+      4  100.0%        LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1055:37
+      4  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      4  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+
+     97    2.0%  __read
+     97  100.0%    LazyCompile: *cpus node:os:133:14
+     97  100.0%      LazyCompile: ~<anonymous> file:///home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/routers/views.js:30:34
+     97  100.0%        LazyCompile: ~handle /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/router/layer.js:86:49
+     97  100.0%          LazyCompile: ~next /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/router/route.js:114:16
+     97  100.0%            LazyCompile: ~<anonymous> file:///home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/routers/middlewares/auth.js:14:12
+
+     72    1.5%  epoll_pwait
+
+     62    1.3%  __pthread_cond_signal
+     16   25.8%    LazyCompile: *readFile node:fs:373:18
+     15   93.8%      LazyCompile: ~go$readFile /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/graceful-fs/graceful-fs.js:117:26
+     15  100.0%        LazyCompile: ~readFile /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/graceful-fs/graceful-fs.js:111:21
+      8   53.3%          LazyCompile: *getTemplate /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express-handlebars/lib/express-handlebars.js:108:20
+      8  100.0%            LazyCompile: ~render /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express-handlebars/lib/express-handlebars.js:150:15
+      3   20.0%          LazyCompile: *_getFile /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express-handlebars/lib/express-handlebars.js:299:17
+      3  100.0%            LazyCompile: *render /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express-handlebars/lib/express-handlebars.js:150:15
+      2   13.3%          LazyCompile: ~<anonymous> node:internal/util:332:24
+      2  100.0%            /usr/bin/node
+      2   13.3%          LazyCompile: *<anonymous> node:internal/util:332:24
+      2  100.0%            /usr/bin/node
+      1    6.3%      LazyCompile: *readFile /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/graceful-fs/graceful-fs.js:111:21
+      1  100.0%        LazyCompile: *_getFile /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express-handlebars/lib/express-handlebars.js:299:17
+      1  100.0%          LazyCompile: *render /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express-handlebars/lib/express-handlebars.js:150:15
+      1  100.0%            LazyCompile: *renderView /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express-handlebars/lib/express-handlebars.js:183:19
+     13   21.0%    LazyCompile: *readFileAfterOpen node:fs:310:27
+     13   21.0%    LazyCompile: *read node:internal/fs/read_file_context:85:7
+     13  100.0%      LazyCompile: ~readFileAfterStat node:fs:326:27
+      1    1.6%    /usr/bin/node
+      1  100.0%      LazyCompile: ~onstat /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/send/index.js:721:33
+      1  100.0%        LazyCompile: ~<anonymous> node:fs:197:10
+
+     57    1.2%  fwrite
+     43   75.4%    /usr/bin/node
+      2    4.7%      LazyCompile: ~serializeInto /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/bson/lib/bson/parser/serializer.js:674:43
+      2  100.0%        LazyCompile: ~serializeObject /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/bson/lib/bson/parser/serializer.js:320:31
+      2  100.0%          LazyCompile: ~serializeInto /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/bson/lib/bson/parser/serializer.js:674:43
+      1   50.0%            LazyCompile: ~serializeObject /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/bson/lib/bson/parser/serializer.js:320:31
+      1   50.0%            LazyCompile: ~serialize /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/bson/lib/bson/bson.js:47:46
+      2    4.7%      LazyCompile: ~realpathSync node:fs:2408:22
+      2  100.0%        LazyCompile: ~toRealPath node:internal/modules/cjs/loader:393:20
+      2  100.0%          LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:494:28
+      2  100.0%            LazyCompile: ~resolveMainPath node:internal/modules/run_main:11:25
+      2    4.7%      LazyCompile: ~find_package_json_with_name /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/require_optional/index.js:27:43
+      2  100.0%        LazyCompile: ~require_optional /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/require_optional/index.js:65:32
+      2  100.0%          LazyCompile: ~retrieveEJSON /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/utils.js:48:23
+      2  100.0%            Function: ~<anonymous> /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/index.js:1:1
+      2    4.7%      LazyCompile: ~_command /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/wireprotocol/command.js:41:18
+      2  100.0%        LazyCompile: ~command /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/wireprotocol/command.js:19:17
+      2  100.0%          LazyCompile: ~command /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/cmap/connection.js:170:10
+      2  100.0%            LazyCompile: ~<anonymous> /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/connection/connect.js:87:41
+      1    2.3%      LazyCompile: ~writeHead /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/on-headers/index.js:28:29
+      1  100.0%        LazyCompile: ~_implicitHeader node:_http_server:265:68
+      1  100.0%          LazyCompile: ~end /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/compression/index.js:92:28
+      1  100.0%            LazyCompile: ~send /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/response.js:107:25
+      1    2.3%      LazyCompile: ~useColors /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/debug/src/node.js:75:19
+      1  100.0%        LazyCompile: ~createDebug /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/debug/src/debug.js:63:21
+      1  100.0%          Function: ~<anonymous> /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/finalhandler/index.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1055:37
+      1    2.3%      LazyCompile: ~translatePeerCertificate node:_tls_common:124:34
+      1  100.0%        LazyCompile: ~TLSSocket.getPeerCertificate node:_tls_wrap:984:50
+      1  100.0%          LazyCompile: ~onConnectSecure node:_tls_wrap:1516:25
+      1  100.0%            LazyCompile: ~emit node:events:343:44
+      1    2.3%      LazyCompile: ~touch /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express-session/session/session.js:47:56
+      1  100.0%        LazyCompile: ~end /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express-session/index.js:250:27
+      1  100.0%          LazyCompile: ~end /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/compression/index.js:92:28
+      1  100.0%            LazyCompile: ~send /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/response.js:107:25
+      1    2.3%      LazyCompile: ~toRealPath node:internal/modules/cjs/loader:393:20
+      1  100.0%        LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:494:28
+      1  100.0%          LazyCompile: ~resolveMainPath node:internal/modules/run_main:11:25
+      1  100.0%            LazyCompile: ~executeUserEntryPoint node:internal/modules/run_main:72:31
+      1    2.3%      LazyCompile: ~stringify node:internal/modules/esm/translators:99:19
+      1  100.0%        LazyCompile: ~moduleStrategy node:internal/modules/esm/translators:137:56
+      1  100.0%          /usr/bin/node
+      1    2.3%      LazyCompile: ~setupWarningHandler node:internal/bootstrap/pre_execution:141:29
+      1  100.0%        LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:22:36
+      1  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    2.3%      LazyCompile: ~serialize /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/bson/lib/bson/bson.js:47:46
+      1  100.0%        LazyCompile: ~serializeBson /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/connection/msg.js:126:16
+      1  100.0%          LazyCompile: ~makeDocumentSegment /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/connection/msg.js:115:22
+      1  100.0%            LazyCompile: ~toBin /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/connection/msg.js:80:8
+      1    2.3%      LazyCompile: ~randomBytes node:internal/crypto/random:90:21
+      1  100.0%        LazyCompile: ~prepare /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/auth/scram.js:25:10
+      1  100.0%          LazyCompile: ~prepareHandshakeDocument /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/connection/connect.js:159:34
+      1  100.0%            LazyCompile: ~performInitialHandshake /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/connection/connect.js:70:33
+      1    2.3%      LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:22:36
+      1  100.0%        Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    2.3%      LazyCompile: ~parseQueryString /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/uri_parser.js:420:26
+      1  100.0%        LazyCompile: ~parseConnectionString /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/uri_parser.js:560:31
+      1  100.0%          LazyCompile: ~connect /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/operations/connect.js:261:17
+      1  100.0%            LazyCompile: ~<anonymous> /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/mongo_client.js:221:39
+      1    2.3%      LazyCompile: ~parse /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:269:30
+      1  100.0%        LazyCompile: ~parseWithoutProcessing /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/base.js:33:32
+      1  100.0%          LazyCompile: ~parse /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/base.js:51:15
+      1  100.0%            LazyCompile: ~compileInput /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+      1    2.3%      LazyCompile: ~onParseError node:internal/url:560:22
+      1  100.0%        /usr/bin/node
+      1  100.0%          LazyCompile: ~URL node:internal/url:629:14
+      1  100.0%            LazyCompile: ~defaultResolve node:internal/modules/esm/resolve:915:24
+      1    2.3%      LazyCompile: ~messageHandler /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/cmap/connection.js:220:33
+      1  100.0%        LazyCompile: ~emit node:events:343:44
+      1  100.0%          LazyCompile: ~processIncomingData /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/cmap/message_stream.js:103:29
+      1  100.0%            LazyCompile: ~_write /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/cmap/message_stream.js:38:9
+      1    2.3%      LazyCompile: ~makeConnection /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/connection/connect.js:254:24
+      1  100.0%        LazyCompile: ~connect /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/connection/connect.js:18:17
+      1  100.0%          LazyCompile: ~checkServer /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/sdam/monitor.js:177:21
+      1  100.0%            LazyCompile: ~<anonymous> /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/sdam/monitor.js:286:10
+      1    2.3%      LazyCompile: ~listOnTimeout node:internal/timers:505:25
+      1  100.0%        LazyCompile: ~processTimers node:internal/timers:485:25
+      1    2.3%      LazyCompile: ~getReadPreference /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/wireprotocol/shared.js:25:33
+      1  100.0%        LazyCompile: ~_command /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/wireprotocol/command.js:41:18
+      1  100.0%          LazyCompile: ~command /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/wireprotocol/command.js:19:17
+      1  100.0%            LazyCompile: ~command /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/cmap/connection.js:170:10
+      1    2.3%      LazyCompile: ~deserialize /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/bson/lib/bson/parser/deserializer.js:19:27
+      1  100.0%        LazyCompile: ~BSON.deserialize /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/bson/lib/bson/bson.js:134:38
+      1  100.0%          LazyCompile: ~Response.parse /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/connection/commands.js:438:36
+      1  100.0%            LazyCompile: ~messageHandler /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/cmap/connection.js:220:33
+      1    2.3%      LazyCompile: ~createWritableStdioStream node:internal/bootstrap/switches/is_main_thread:41:35
+      1  100.0%        LazyCompile: ~getStderr node:internal/bootstrap/switches/is_main_thread:133:19
+      1  100.0%          Function: ~<anonymous> /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/debug/src/node.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1055:37
+      1    2.3%      LazyCompile: ~createHmac node:crypto:161:20
+      1  100.0%        LazyCompile: ~HMAC /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/auth/scram.js:266:14
+      1  100.0%          LazyCompile: ~continueScramConversation /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/auth/scram.js:116:35
+      1  100.0%            LazyCompile: ~<anonymous> /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/auth/scram.js:106:50
+      1    2.3%      LazyCompile: ~createHash node:crypto:129:20
+      1  100.0%        LazyCompile: ~passwordDigest /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/auth/scram.js:221:24
+      1  100.0%          LazyCompile: ~continueScramConversation /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/auth/scram.js:116:35
+      1  100.0%            LazyCompile: ~<anonymous> /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/auth/scram.js:106:50
+      1    2.3%      LazyCompile: ~Readable.on node:internal/streams/readable:875:33
+      1  100.0%        LazyCompile: ~Readable.pipe node:internal/streams/readable:654:35
+      1  100.0%          LazyCompile: ~Connection /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/cmap/connection.js:29:14
+      1  100.0%            LazyCompile: ~<anonymous> /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/connection/connect.js:30:54
+      1    2.3%      LazyCompile: ~PathExpression /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:289:42
+      1  100.0%        LazyCompile: ~accept /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:101:26
+      1  100.0%          LazyCompile: ~simpleSexpr /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:264:36
+      1  100.0%            LazyCompile: ~SubExpression /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:236:40
+      1    2.3%      LazyCompile: ~OAuth2Strategy /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/passport-oauth2/lib/strategy.js:77:24
+      1  100.0%        LazyCompile: ~Strategy /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/passport-facebook/lib/strategy.js:48:18
+      1  100.0%          Script: ~<anonymous> file:///home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/routers/auth_api.js:1:1
+      1  100.0%            /usr/bin/node
+      1    2.3%      LazyCompile: ~Db /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/db.js:142:12
+      1  100.0%        LazyCompile: ~MongoClient.db /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/mongo_client.js:295:36
+      1  100.0%          LazyCompile: ~<anonymous> /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/build/main/lib/MongoStore.js:125:19
+      1  100.0%            /usr/bin/node
+      1    2.3%      LazyCompile: ~BufferList.<computed> /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/bl/bl.js:383:44
+      1  100.0%        LazyCompile: ~processIncomingData /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/cmap/message_stream.js:103:29
+      1  100.0%          LazyCompile: ~_write /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/cmap/message_stream.js:38:9
+      1  100.0%            LazyCompile: ~writeOrBuffer node:internal/streams/writable:365:23
+      1    2.3%      LazyCompile: ~BufferList /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/bl/bl.js:6:21
+      1  100.0%        LazyCompile: ~MessageStream /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/cmap/message_stream.js:28:14
+      1  100.0%          LazyCompile: ~Connection /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/cmap/connection.js:29:14
+      1  100.0%            LazyCompile: ~<anonymous> /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/connection/connect.js:30:54
+      1    2.3%      LazyCompile: ~<anonymous> node:path:1082:10
+      1  100.0%        LazyCompile: ~resolve node:path:1091:10
+      1  100.0%          LazyCompile: ~patchProcessObject node:internal/bootstrap/pre_execution:81:28
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:22:36
+      1    2.3%      LazyCompile: ~<anonymous> /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/connection/connect.js:99:64
+      1  100.0%        LazyCompile: ~messageHandler /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/cmap/connection.js:220:33
+      1  100.0%          LazyCompile: ~emit node:events:343:44
+      1  100.0%            LazyCompile: ~processIncomingData /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/cmap/message_stream.js:103:29
+      1    2.3%      LazyCompile: ~<anonymous> /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/cmap/connection_pool.js:393:53
+      1  100.0%        LazyCompile: ~callback /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/connection/connect.js:71:28
+      1  100.0%          LazyCompile: ~<anonymous> /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/connection/connect.js:146:40
+      1  100.0%            LazyCompile: ~<anonymous> /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/auth/scram.js:183:53
+      1    2.3%      LazyCompile: *next /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:478:32
+      1  100.0%        LazyCompile: *parse /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:269:30
+      1  100.0%          LazyCompile: ~parseWithoutProcessing /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/base.js:33:32
+      1  100.0%            LazyCompile: ~parse /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/base.js:51:15
+      1    2.3%      Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    2.3%      Function: ~<anonymous> node:internal/fs/rimraf:1:1
+      1  100.0%        LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%          LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1  100.0%            Function: ~<anonymous> node:internal/fs/promises:1:1
+      1    2.3%      Function: ~<anonymous> node:internal/fs/promises:1:1
+      1  100.0%        LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%          LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1  100.0%            Function: ~<anonymous> node:internal/modules/esm/get_source:1:1
+      1    2.3%      /usr/bin/node
+      1  100.0%        LazyCompile: ~<anonymous> /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/minimatch/minimatch.js:181:26
+      1  100.0%          /usr/bin/node
+      1  100.0%            LazyCompile: ~make /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/minimatch/minimatch.js:142:15
+     12   21.1%    LazyCompile: *compileFunction node:vm:308:25
+     12  100.0%      LazyCompile: ~wrapSafe node:internal/modules/cjs/loader:1017:18
+     12  100.0%        LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1055:37
+     12  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1110:37
+     12  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+
+     51    1.1%  __write
+     38   74.5%    /usr/bin/node
+      3    7.9%      LazyCompile: ~emit node:events:343:44
+      1   33.3%        LazyCompile: ~processIncomingData /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/cmap/message_stream.js:103:29
+      1  100.0%          LazyCompile: ~_write /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/cmap/message_stream.js:38:9
+      1  100.0%            LazyCompile: ~writeOrBuffer node:internal/streams/writable:365:23
+      1   33.3%        LazyCompile: ~TLSSocket._finishInit node:_tls_wrap:918:43
+      1  100.0%          LazyCompile: ~ssl.onhandshakedone node:_tls_wrap:723:27
+      1   33.3%        LazyCompile: ~Readable.read node:internal/streams/readable:394:35
+      1  100.0%          LazyCompile: ~flow node:internal/streams/readable:1009:14
+      1  100.0%            LazyCompile: ~resume_ node:internal/streams/readable:985:17
+      1    2.6%      LazyCompile: ~setupParams /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1034:36
+      1  100.0%        LazyCompile: ~setupHelperArgs /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1104:44
+      1  100.0%          LazyCompile: ~setupHelper /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1020:36
+      1  100.0%            LazyCompile: ~invokeAmbiguous /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:699:44
+      1    2.6%      LazyCompile: ~serialize /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/bson/lib/bson/bson.js:47:46
+      1  100.0%        LazyCompile: ~Query.toBin /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/connection/commands.js:90:33
+      1  100.0%          LazyCompile: ~writeCommand /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/cmap/message_stream.js:51:15
+      1  100.0%            LazyCompile: ~write /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/cmap/connection.js:297:15
+      1    2.6%      LazyCompile: ~renderView /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express-handlebars/lib/express-handlebars.js:183:19
+      1  100.0%        /usr/bin/node
+      1    2.6%      LazyCompile: ~readableAddChunk node:internal/streams/readable:236:26
+      1  100.0%        LazyCompile: ~Readable.push node:internal/streams/readable:227:35
+      1  100.0%          LazyCompile: ~onStreamRead node:internal/stream_base_commons:171:22
+      1    2.6%      LazyCompile: ~processWaitQueue /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/cmap/connection_pool.js:445:26
+      1  100.0%        LazyCompile: ~<anonymous> /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/cmap/connection_pool.js:236:22
+      1  100.0%          LazyCompile: ~processTicksAndRejections node:internal/process/task_queues:68:35
+      1    2.6%      LazyCompile: ~processTicksAndRejections node:internal/process/task_queues:68:35
+      1    2.6%      LazyCompile: ~processIncomingData /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/cmap/message_stream.js:103:29
+      1  100.0%        LazyCompile: ~_write /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/cmap/message_stream.js:38:9
+      1  100.0%          LazyCompile: ~writeOrBuffer node:internal/streams/writable:365:23
+      1  100.0%            LazyCompile: ~_write node:internal/streams/writable:283:16
+      1    2.6%      LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:22:36
+      1  100.0%        Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    2.6%      LazyCompile: ~pipe /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/send/index.js:510:43
+      1  100.0%        LazyCompile: ~serveStatic /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/serve-static/index.js:72:31
+      1  100.0%          LazyCompile: ~handle /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%            LazyCompile: ~trim_prefix /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/router/index.js:288:23
+      1    2.6%      LazyCompile: ~pbkdf2Sync node:internal/crypto/pbkdf2:68:20
+      1  100.0%        LazyCompile: ~HI /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/auth/scram.js:285:12
+      1  100.0%          LazyCompile: ~continueScramConversation /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/auth/scram.js:116:35
+      1  100.0%            LazyCompile: ~<anonymous> /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/auth/scram.js:106:50
+      1    2.6%      LazyCompile: ~parseConnectionString /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/uri_parser.js:560:31
+      1  100.0%        LazyCompile: ~connect /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/operations/connect.js:261:17
+      1  100.0%          LazyCompile: ~<anonymous> /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/mongo_client.js:221:39
+      1  100.0%            LazyCompile: ~maybePromise /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/utils.js:672:22
+      1    2.6%      LazyCompile: ~parse /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/connection/msg.js:172:8
+      1  100.0%        LazyCompile: ~messageHandler /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/cmap/connection.js:220:33
+      1  100.0%          LazyCompile: ~emit node:events:343:44
+      1  100.0%            LazyCompile: ~processIncomingData /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/cmap/message_stream.js:103:29
+      1    2.6%      LazyCompile: ~make /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/minimatch/minimatch.js:142:15
+      1  100.0%        LazyCompile: ~Minimatch /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/minimatch/minimatch.js:110:20
+      1  100.0%          LazyCompile: ~setopts /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/glob/common.js:47:18
+      1  100.0%            LazyCompile: ~Glob /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/glob/glob.js:118:15
+      1    2.6%      LazyCompile: ~listOnTimeout node:internal/timers:505:25
+      1  100.0%        LazyCompile: ~processTimers node:internal/timers:485:25
+      1    2.6%      LazyCompile: ~jsonParser /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/body-parser/lib/types/json.js:98:30
+      1  100.0%        LazyCompile: ~handle /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%          LazyCompile: ~trim_prefix /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/router/index.js:288:23
+      1  100.0%            LazyCompile: ~<anonymous> /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/router/index.js:275:64
+      1    2.6%      LazyCompile: ~getStatsFromBinding node:internal/fs/utils:530:29
+      1  100.0%        LazyCompile: ~statSync node:fs:1528:18
+      1  100.0%          LazyCompile: ~tryStat /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/view.js:174:17
+      1  100.0%            LazyCompile: ~resolve /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/view.js:146:42
+      1    2.6%      LazyCompile: ~enable /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/socket.io-parser/node_modules/debug/src/common.js:150:17
+      1  100.0%        LazyCompile: ~setup /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/socket.io-parser/node_modules/debug/src/common.js:7:15
+      1  100.0%          Function: ~<anonymous> /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/socket.io-parser/node_modules/debug/src/node.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1055:37
+      1    2.6%      LazyCompile: ~compression /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/compression/index.js:59:31
+      1  100.0%        LazyCompile: ~handle /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%          LazyCompile: ~trim_prefix /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/router/index.js:288:23
+      1  100.0%            LazyCompile: ~<anonymous> /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/express/lib/router/index.js:275:64
+      1    2.6%      LazyCompile: ~clearIncoming node:_http_server:748:23
+      1  100.0%        LazyCompile: ~resOnFinish node:_http_server:787:21
+      1  100.0%          LazyCompile: ~emit node:events:343:44
+      1  100.0%            LazyCompile: ~onFinish node:_http_outgoing:825:18
+      1    2.6%      LazyCompile: ~checkIn /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/cmap/connection_pool.js:244:10
+      1  100.0%        LazyCompile: ~<anonymous> /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/cmap/connection_pool.js:345:21
+      1  100.0%          LazyCompile: ~handleOperationResult /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/sdam/server.js:520:40
+      1  100.0%            LazyCompile: ~messageHandler /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/cmap/connection.js:220:33
+      1    2.6%      LazyCompile: ~auth /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/auth/scram.js:50:7
+      1  100.0%        LazyCompile: ~<anonymous> /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/connection/connect.js:99:64
+      1  100.0%          LazyCompile: ~messageHandler /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/cmap/connection.js:220:33
+      1  100.0%            LazyCompile: ~emit node:events:343:44
+      1    2.6%      LazyCompile: ~Writable /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/readable-stream/lib/_stream_writable.js:250:18
+      1  100.0%        LazyCompile: ~Duplex /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/readable-stream/lib/_stream_duplex.js:64:16
+      1  100.0%          LazyCompile: ~BufferList /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/bl/bl.js:6:21
+      1  100.0%            LazyCompile: ~MessageStream /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/cmap/message_stream.js:28:14
+      1    2.6%      LazyCompile: ~Socket.end node:net:593:32
+      1  100.0%        LazyCompile: ~socketOnEnd node:_http_server:600:21
+      1  100.0%          LazyCompile: *emit node:events:343:44
+      1  100.0%            LazyCompile: ~endReadableNT node:internal/streams/readable:1341:23
+      1    2.6%      LazyCompile: ~Socket._destroy node:net:652:37
+      1  100.0%        LazyCompile: ~_destroy node:internal/streams/destroy:70:18
+      1  100.0%          LazyCompile: ~destroy node:internal/streams/destroy:32:17
+      1  100.0%            LazyCompile: ~finish node:internal/streams/writable:741:16
+      1    2.6%      LazyCompile: ~PathExpression /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:289:42
+      1  100.0%        LazyCompile: ~accept /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:101:26
+      1  100.0%          LazyCompile: ~simpleSexpr /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:264:36
+      1  100.0%            LazyCompile: ~SubExpression /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:236:40
+      1    2.6%      LazyCompile: ~Glob._finish /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/glob/glob.js:186:35
+      1  100.0%        LazyCompile: ~done /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/glob/glob.js:172:17
+      1  100.0%          LazyCompile: ~Glob._processGlobStar2 /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/glob/glob.js:629:45
+      1  100.0%            LazyCompile: ~<anonymous> /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/glob/glob.js:623:43
+      1    2.6%      LazyCompile: ~Db /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/db.js:142:12
+      1  100.0%        LazyCompile: ~MongoClient.db /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/mongo_client.js:295:36
+      1  100.0%          LazyCompile: ~<anonymous> /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/build/main/lib/MongoStore.js:125:19
+      1  100.0%            /usr/bin/node
+      1    2.6%      LazyCompile: ~CommandOperationV2 /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/operations/command_v2.js:16:14
+      1  100.0%        LazyCompile: ~CreateIndexesOperation /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/operations/create_indexes.js:45:14
+      1  100.0%          LazyCompile: ~Collection.createIndex /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/collection.js:1243:44
+      1  100.0%            LazyCompile: ~setAutoRemove /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/build/main/lib/MongoStore.js:138:18
+      1    2.6%      LazyCompile: ~BSON.deserialize /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/bson/lib/bson/bson.js:134:38
+      1  100.0%        LazyCompile: ~Response.parse /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/connection/commands.js:438:36
+      1  100.0%          LazyCompile: ~messageHandler /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/cmap/connection.js:220:33
+      1  100.0%            LazyCompile: ~emit node:events:343:44
+      1    2.6%      LazyCompile: ~<anonymous> /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/sdam/monitor.js:337:35
+      1  100.0%        LazyCompile: ~listOnTimeout node:internal/timers:505:25
+      1  100.0%          LazyCompile: ~processTimers node:internal/timers:485:25
+      1    2.6%      LazyCompile: ~<anonymous> /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/core/auth/scram.js:106:50
+      1  100.0%        LazyCompile: ~messageHandler /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/cmap/connection.js:220:33
+      1  100.0%          LazyCompile: ~emit node:events:343:44
+      1  100.0%            LazyCompile: ~processIncomingData /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/connect-mongo/node_modules/mongodb/lib/cmap/message_stream.js:103:29
+      1    2.6%      LazyCompile: *readFileAfterOpen node:fs:310:27
+      1    2.6%      LazyCompile: *parse /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:269:30
+      1  100.0%        LazyCompile: ~parseWithoutProcessing /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/base.js:33:32
+      1  100.0%          LazyCompile: ~parse /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/base.js:51:15
+      1  100.0%            LazyCompile: ~compileInput /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+      1    2.6%      Function: ~<anonymous> node:dns:1:1
+      1  100.0%        LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%          LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:246:25
+      1  100.0%            LazyCompile: ~loadNativeModule node:internal/modules/cjs/helpers:36:26
+      1    2.6%      /usr/bin/node
+      1  100.0%        LazyCompile: ~next /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:478:32
+      1  100.0%          LazyCompile: ~lex /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:525:30
+      1  100.0%            LazyCompile: ~lex /home/hoffme/Documentos/coder/nodejs/entregas/entrega-8-a-13-,-17-,-20-,-22-a-30/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:295:25
+      7   13.7%    LazyCompile: *compileFunction node:vm:308:25
+      7  100.0%      LazyCompile: ~wrapSafe node:internal/modules/cjs/loader:1017:18
+      7  100.0%        LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1055:37
+      7  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      7  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+
