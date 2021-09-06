@@ -13,6 +13,10 @@ const realtime = (io) => {
         socket.emit('initial_data', intialData);
 
         socket.on('message', message => {
+            if (message.text.toLowerCase().includes('admin')) {
+                Controllers.notifier.adminMessageNotify(message);
+            }
+
             Controllers.chat.addMessage(message);
         })
     })
