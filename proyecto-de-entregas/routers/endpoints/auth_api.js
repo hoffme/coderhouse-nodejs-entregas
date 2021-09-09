@@ -3,11 +3,11 @@ import { Router } from 'express';
 import passport from 'passport';
 import passportFacebok from 'passport-facebook';
 
-import Controllers from '../controllers/index.js';
+import Controllers from '../../controllers/index.js';
 
-import auth from './middlewares/auth.js';
+import auth from '../middlewares/auth.js';
 
-import { FACEBOOK_CLIENT_ID, FACEBOOK_CLIENT_SECRECT, PORT } from '../settings.js';
+import { FACEBOOK_CLIENT_ID, FACEBOOK_CLIENT_SECRECT, PORT } from '../../settings.js';
 
 const FacebookStrategy = passportFacebok.Strategy;
 
