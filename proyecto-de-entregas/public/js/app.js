@@ -30,7 +30,19 @@ const send = async (to, method = 'GET', obj) => {
 }
 
 const createProduct = async product => {
-    await send('/api/products/save', 'POST', product);
+    await send('/graphql', 'POST', {
+        query: `
+            mutation {
+                createProduct(fields: {
+                    name:"${product.name || ''}", 
+                    price:"${product.price || ''}", 
+                    thumbnail:"${product.thumbnail || ''}"
+                }) {
+                    id
+                }
+            }
+        `,
+    });
 }
 
 const deleteProduct = async id => {

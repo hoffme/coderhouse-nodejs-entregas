@@ -2,8 +2,9 @@ import express from 'express';
 import compression from 'compression';
 import { Server } from 'http';
 import { Server as SocketIO } from 'socket.io';
-import passport from 'passport';
+import { graphqlHTTP } from 'express-graphql';
 
+import passport from 'passport';
 import seccion from 'express-session';
 import MongoStore from 'connect-mongo';
 
@@ -14,6 +15,9 @@ import EngineSetup from './engines/engine.js';
 import apiRouter from './routers/api.js';
 import viewRouter from './routers/views.js';
 import realTime from './routers/realtime.js';
+
+import schema from './graphql/schema.js';
+import root from './graphql/root.js';
 
 import Log from './logger/main.js';
 
@@ -60,8 +64,15 @@ const app = async () => {
     // views routes
     app.use('', viewRouter);
 
-    // api routes
+    // api
     app.use('/api', apiRouter);
+
+    // graphql
+    app.use('/graphql', graphqlHTTP({
+        schema,
+        rootValue: root,
+        graphiql: true
+    }));
 
     app.use(ErrorsMiddleware);
 
