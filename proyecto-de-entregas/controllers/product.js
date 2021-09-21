@@ -1,6 +1,7 @@
 import Faker from 'faker';
 
 import successResponse from '../routers/responses/success.js';
+import errorResponse from '../routers/responses/errors.js';
 
 class ProductsController {
     constructor(repository) {
@@ -46,34 +47,43 @@ class ProductsController {
         successResponse(res, products);
     }
 
-    async getAllREST(req, res) {
-        const products = await this.getAll();
-        successResponse(res, products);
+    getAllREST(req, res) {
+        this.getAll()
+            .then(products => successResponse(res, products))
+            .catch(err => errorResponse(res, err.message))
     }
 
-    async getByIdREST(req, res) {
+    getByIdREST(req, res) {
         const id = req.params.id;
-        const product = this.getById(id);
-        successResponse(res, product);
+
+        this.getById(id)
+            .then(product => successResponse(res, product))
+            .catch(err => errorResponse(res, err.message, 404))
     }
 
-    async createREST(req, res) {
+    createREST(req, res) {
         const createParams = req.body;
-        const product = await this.create(createParams);
-        successResponse(res, product);
+
+        this.create(createParams)
+            .then(product => successResponse(res, product))
+            .catch(err => errorResponse(res, err.message))
     }
 
-    async updateREST(req, res) {
+    updateREST(req, res) {
         const id = req.params.id;
         const update = req.body;
-        const productUpdated = await this.update(id, update);
-        successResponse(res, productUpdated);
+        
+        this.update(id, update)
+            .then(product => successResponse(res, product))
+            .catch(err => errorResponse(res, err.message))
     }
 
-    async deleteREST(req, res) {
+    deleteREST(req, res) {
         const id = req.params.id;
-        const productDeleted = await this.delete(id);
-        successResponse(res, productDeleted);
+
+        this.delete(id)
+            .then(product => successResponse(res, product))
+            .catch(err => errorResponse(res, err.message))
     }
 
     // Methods

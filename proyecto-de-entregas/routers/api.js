@@ -10,7 +10,7 @@ const router = Router();
 
 // adding routes
 
-router.use('/products', auth(true), ProductRouter);
+router.use('/products', ProductRouter);
 router.use('/randoms', RandomsRouter);
 router.use('/auth', AuthRouter);
 
