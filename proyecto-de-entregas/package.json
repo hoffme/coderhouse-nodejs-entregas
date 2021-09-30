@@ -5,14 +5,14 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "start": "node --inspect index.js",
+    "start": "set NODE_ENV=development && node --inspect index.js",
     "0x": "0x index.js",
     "test": "mocha test/*.test.js",
-    "cluster": "node cluster.js",
-    "prod": "forever start index.js",
-    "prod-cluster": "forever start cluster.js",
-    "prod-pm2": "pm2 start --name='server-fork' --watch index.js",
-    "prod-cluster-pm2": "pm2 start --name='server-cluster' --watch -i max index.js"
+    "cluster": "set NODE_ENV=development && node cluster.js",
+    "prod": "set NODE_ENV=production && forever start index.js",
+    "prod-cluster": "set NODE_ENV=production && forever start cluster.js",
+    "prod-pm2": "set NODE_ENV=production && pm2 start --name='server-fork' --watch index.js",
+    "prod-cluster-pm2": "set NODE_ENV=production && pm2 start --name='server-cluster' --watch -i max index.js"
   },
   "author": "",
   "license": "ISC",
@@ -31,6 +31,7 @@
     "faker": "^5.5.3",
     "graphql": "^15.5.3",
     "knex": "^0.95.6",
+    "minimist": "^1.2.5",
     "mocha": "^9.1.1",
     "mongoose": "^5.13.2",
     "mysql": "^2.18.1",
