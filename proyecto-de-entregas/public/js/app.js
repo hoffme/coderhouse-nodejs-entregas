@@ -45,8 +45,28 @@ const createProduct = async product => {
     });
 }
 
+const updateProduct = async product => {
+    await send('/graphql', 'POST', {
+        query: `
+            mutation {
+                updateProduct(input: ${JSON.parse(product)}) {
+                    id
+                }
+            }
+        `,
+    });
+}
+
 const deleteProduct = async id => {
-    await send(`/api/products/delete/${id}`, 'DELETE');
+    await send('/graphql', 'POST', {
+        query: `
+            mutation {
+                deleteProduct(id: "${id}") {
+                    id
+                }
+            }
+        `,
+    });
 }
 
 const refreshProducts = (productsView, products) => {

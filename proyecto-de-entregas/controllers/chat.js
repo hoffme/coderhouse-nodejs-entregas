@@ -10,15 +10,11 @@ class ChatController {
         this.repository.onDelete = (message, messages) => this.notify('delete', normalizeMessage(message), normalizeMessages(messages));
     }
 
-    // Events
-
     notify(type, ...p) { this.listeiners.forEach(lis => lis.cb(type, ...p)) }
 
     addListeiner(id, cb) { this.listeiners.push({ id, cb }) }
 
     removeListeiner(id) { this.listeiners = this.listeiners.filter(lis => lis.id !== id) }
-
-    // Methods
 
     async allMessages() { return normalizeMessages(await this.repository.getAll()) }
     
