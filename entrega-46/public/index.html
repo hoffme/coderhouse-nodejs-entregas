@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div class="products-section">
+      <div class="products-create-container">
+          <h3>Ingreso de Producto</h3>
+          <form id="form-product-save">
+              <div class="field field-name">
+                  <label>Nombre</label>
+                  <input type="text" name="name" />
+              </div>
+              <div class="field field-price">
+                  <label>Precio</label>
+                  <input type="number" name="price" />
+              </div>
+              <div class="field field-thumbnail">
+                  <label>Thumbnail</label>
+                  <input type="text" name="thumbinal" />
+              </div>
+              <input class="button-submit" type="submit" value="Guardar" />
+          </form>
+          <label id="status"></label>
+      </div>
+      <div class="products-list-container">
+          <h3>Productos</h3>
+          <div id="products" class="products">
+
+          </div>
+      </div>
+  </div>
+  <script src="/js/app.js"></script>
+</body>
+</html>
